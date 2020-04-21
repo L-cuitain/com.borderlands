@@ -1,0 +1,327 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+
+/* 标题 */
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    font-weight: 400;
+    color: #ffea02;
+    font-family: countach-italic,sans-serif;
+    text-transform: uppercase;
+    line-height: .95;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a{
+ text-decoration:none;
+}
+
+/* 文字阴影 */
+.text-shadow{
+    text-shadow: -3px 3px 6px rgba(4,226,255,.5) , -2px 2px 1px #000;
+}
+
+.flex-1{
+    flex: 1;
+}
+
+
+
+/* 按钮 */
+.btn{
+    float: left;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btn-rl{
+    float: left;
+    background-repeat: no-repeat;
+}
+
+.btn-center{
+    float: left;
+    font-size: 20px;
+    font-family: countach-italic,sans-serif;
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+
+
+
+/* 导航 */
+.nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 72px;
+    padding: 0px 20px 20px;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+.nav-content{
+    width: auto;
+    height: 100%;
+    margin: 0 140px;
+    box-sizing: border-box;
+}
+
+.nav-logo{
+    float: left;
+    width: 150px;
+    height: 43px;
+    margin: 4px 35px 0 20px;
+}
+
+/* 导航栏左 */
+.nav-list-left{
+    float: left;
+    width: 560px;
+    height: 22px;
+    margin: 15px 0 15px;
+    padding-right: 20px;
+}
+
+.nav-item{
+    position: relative;
+    float: left;
+    width: auto;
+    height: 22px;
+    margin-right: 35px;
+}
+
+.nav-item span{
+    color: #fff;
+    font-size: 18px;
+}
+
+.shift{
+    float: left;
+    display: block;
+    width: 78px;
+    height: 14px;
+    margin-top: 5px;
+    background: url(../images/index/sprite-ui-1x.png) no-repeat center;
+    background-position: -230px -300px;
+
+    /* 鼠标移入后的坐标 */
+    /* background-position: -150px -300px; */
+}
+
+.nav-item div{
+    float: right;
+    width: 10px;
+    height: 8px;
+    margin-top:8px;
+    margin-left: 5px;
+    background: url(../images/index/sprite-ui-1x.png) no-repeat center;
+    background-position: -425px -101px;
+    
+}
+
+.nav-logo a{
+    height: 100%;
+    display: block;
+    background-image: url(../images/index/sprite-ui-1x.png);
+    background-position: -344px 0;
+}
+
+
+.nav-item-list{
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* 导航栏右 */
+.nav-list-right{
+    position: relative;
+    float: left;
+    width: 415px;
+    height: 30px;
+    margin-top: 12px;
+}
+
+.nav-list-right .nav-item{
+    float: right;
+    margin: 0;
+    width: 34px;
+}
+
+.nav-list-right .nav-item div{
+    margin-left: 0;
+}
+
+.language{
+    float: left;
+    display: block;
+    width: 19px;
+    height: 18px;
+    margin-top: 5px;
+    background-image: url(../images/index/sprite-ui-1x.png);
+    background-position: -317px -392px;
+
+    /* 鼠标移入后的样式 */
+    /* background-position: -297px -392px; */
+}
+
+
+.nav-button{
+    position: absolute;
+    top: 0px;
+    left: 228px;
+    width: 120px;
+    height: 100%;
+    margin-right: 30px;
+    transition: all 0.5s;
+}
+
+.nav-button:hover{
+    top: -3px;
+}
+
+.nav-button-left{
+    width: 11px;
+    height: 100%;
+    background-image: url(../images/index/sprite-ui-1x.png);
+    background-position: -481px -44px;
+}
+
+.nav-button-center{
+    width: 96px;
+    height: 100%;
+    line-height: 30px;
+    font-size: 19px;
+    background-image: url(../images/index/button-yellow-sm-m.webp);
+    color: #000000;
+}
+
+.nav-button-right{
+    width: 11px;
+    height: 100%;
+    background-image: url(../images/index/sprite-ui-1x.png);
+    background-position: -480px -237px;
+}
+
+
+
+
+
+/* 顶部 */
+.title{
+    position: relative;
+    width: auto;
+    height: 600px;
+    overflow: hidden;
+}
+
+/* 中间部分 */
+.title-center{
+    position: absolute;
+    top: 295px;
+    height: 240px;
+    padding: 35px;
+    box-sizing: border-box;
+}
+
+/* 标题文字 */
+.title-text{
+    margin: 15px 0 19px;
+    font-size: 70px;
+}
+
+/* 按钮 */
+.title-buttons{
+    width: auto;
+    height: 64px;
+    margin-left: -31px;   
+}
+
+.title-button{
+    position: absolute;
+    top: 135px;
+    width: 221px;
+    height: 61px;
+    margin: 0 0 15px 25px;
+    transition: all 0.7s;
+}
+
+.title-button:nth-child(2){
+    left: 245px;
+}
+
+.title-button:hover{
+    top: 132px;
+}
+
+
+.title-button1-left{
+    width: 28px;
+    height: 61px;
+    background-image: url(../images/index/sprite-ui-1x.png);
+    background-position: -60px -329px;
+}
+
+.title-button1-center{
+    width: 165px;
+    height: 61px;
+    line-height: 60px;
+    background-image: url(../images/index/button-yellow-m.webp);
+    color: #000000;
+}
+
+.title-button1-right{
+    width: 28px;
+    height: 61px;
+    background-image: url(../images/index/sprite-ui-1x.png);
+    background-position: -90px -329px;
+}
+
+
+.title-button2-left{
+    width: 28px;
+    height: 61px;
+    background-image: url(../images/index/sprite-ui-1x.png);
+    background-position: -282px -236px;
+}
+
+.title-button2-center{
+    width: 165px;
+    height: 61px;
+    line-height: 60px;
+    background-image: url(../images/index/button-m.webp);
+    color: #fff;
+}
+
+.title-button2-right{
+    width: 28px;
+    height: 61px;
+    background-image: url(../images/index/sprite-ui-1x.png);
+    background-position: -312px -236px;
+}
+
+
+
+/* 背景视频 */
+.title video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
