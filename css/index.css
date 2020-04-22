@@ -3,6 +3,12 @@ html,body{
     padding: 0;
 }
 
+/* 字体 */
+@font-face{
+    font-family: borderland;
+    src: url(../fonts/countachweb-italic.woff);
+}
+
 /* 标题 */
 h1,h2,h3,h4,h5,h6{
     margin: 0;
@@ -27,11 +33,6 @@ a{
 .text-shadow{
     text-shadow: -3px 3px 6px rgba(4,226,255,.5) , -2px 2px 1px #000;
 }
-
-.flex-1{
-    flex: 1;
-}
-
 
 
 /* 按钮 */
@@ -64,7 +65,8 @@ a{
     width: 100%;
     height: 72px;
     padding: 0px 20px 20px;
-    background-color: rgba(0,0,0,0.5);
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.7);
     z-index: 1;
 }
 
@@ -94,14 +96,26 @@ a{
 .nav-item{
     position: relative;
     float: left;
-    width: auto;
-    height: 22px;
-    margin-right: 35px;
+    max-width: 95px;
+    height: 38px;
+    padding-right: 35px;
+    cursor: pointer;
 }
+
+
+.nav-item:hover span{
+    color: #ffea02;
+}
+
+.nav-item:hover div{
+    background-position: -481px -91px;
+}
+
 
 .nav-item span{
     color: #fff;
     font-size: 18px;
+    transition: all 0.6s;
 }
 
 .shift{
@@ -112,10 +126,20 @@ a{
     margin-top: 5px;
     background: url(../images/index/sprite-ui-1x.png) no-repeat center;
     background-position: -230px -300px;
-
     /* 鼠标移入后的坐标 */
     /* background-position: -150px -300px; */
 }
+
+.shift-nosee{
+    float: left;
+    display: none;
+    width: 78px;
+    height: 14px;
+    margin-top: 5px;
+    background: url(../images/index/sprite-ui-1x.png) no-repeat center;
+    background-position: -150px -300px;
+}
+
 
 .nav-item div{
     float: right;
@@ -138,8 +162,38 @@ a{
 
 .nav-item-list{
     position: absolute;
-    width: 100%;
-    height: auto;
+    top: 38px;
+    left: -17px;
+    width: 0px;
+    height: 0px;
+    background-color: rgba(0,0,0,0.7);
+    display: none;
+    z-index: 100;
+    /* 切角 */
+    clip-path: polygon(0px 0, calc(100%) 0, 100% 20px,
+                    100% calc(100% - 20px), calc(100% - 20px) 100%,
+                    20px 100%, 0 calc(100%), 0 20px);
+}
+
+.long{
+    width: 140px;
+}
+
+.nav-item-list li{
+    width: auto;
+    max-width: 120px;
+    height: 34px;
+    font-size: 18px;
+    padding: 0 15px 10px 15px;
+}
+
+.nav-item-list li a{
+    color: #fff;
+    transition: all 0.6s;
+}
+
+.nav-item-list li:hover a{
+    color: #ffea02;
 }
 
 
@@ -157,6 +211,7 @@ a{
     float: right;
     margin: 0;
     width: 34px;
+    padding-right: 0;
 }
 
 .nav-list-right .nav-item div{
@@ -175,6 +230,23 @@ a{
     /* 鼠标移入后的样式 */
     /* background-position: -297px -392px; */
 }
+
+.language-nosee{
+    float: left;
+    display: none;
+    width: 19px;
+    height: 18px;
+    margin-top: 5px;
+    background-image: url(../images/index/sprite-ui-1x.png);
+    background-position: -296px -392px;
+}
+
+
+.nav-list-right .nav-item-list{
+    font-family: borderland;
+    min-width: 110px;
+}
+
 
 
 .nav-button{
@@ -324,4 +396,22 @@ a{
     transform: translateX(-50%) translateY(-50%);
 }
 
+
+/* 游戏评价 */
+.game-reviews{
+    float: left;
+    width: 100%;
+    height: 62px;
+    padding: 35px 0 35px;
+    border-top: 1px solid #ffea02;
+    background-image: url(../images/index/tvlines.jpg);   
+}
+
+.game-reviews-bg{
+    position: relative;
+    top: -35px;
+    width: 100%;
+    height: 132px;
+    background: radial-gradient(circle at 50% 150%,transparent,rgba(0,0,0,.8),#000);
+}
 
