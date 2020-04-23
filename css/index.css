@@ -180,9 +180,11 @@ a{
 }
 
 .nav-item-list li{
+    position: relative;
+    left: 10px;
     width: auto;
-    max-width: 120px;
     height: 34px;
+    display: none;
     font-size: 18px;
     padding: 0 15px 10px 15px;
 }
@@ -285,7 +287,6 @@ a{
     background-image: url(../images/index/sprite-ui-1x.png);
     background-position: -480px -237px;
 }
-
 
 
 
@@ -415,3 +416,19 @@ a{
     background: radial-gradient(circle at 50% 150%,transparent,rgba(0,0,0,.8),#000);
 }
 
+.game-reviews-content{
+    position: absolute;
+    left : 120px;
+    display: none;
+    width: 1080px;
+    height: 62px;
+    padding: 40px 60px 0;
+    margin: 0 auto;
+}
+
+.game-reviews-content h3,
+.game-reviews-content h4{
+    font-size: 30px;
+    font-family: borderland;
+    text-align: center;
+}
