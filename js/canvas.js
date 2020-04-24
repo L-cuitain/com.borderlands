@@ -95,7 +95,7 @@ function drawdv(ctx,startX, startY, width, height, courseX, stopX, strokeStyle, 
     ctx.fillStyle = fillStyle;
     //填充
     ctx.fill();
-    "/
+    
     // ctx.fillRect(0, 0, 1590, 930);
 
 }
