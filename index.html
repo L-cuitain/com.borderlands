@@ -14,92 +14,92 @@
 <body>
     <!-- 导航 -->
     <nav class="nav">
-        <div class="nav-content">
-            <div class="nav-logo"><a href="#"></a></div>
-            <!-- 导航栏左 -->
-            <ul class="nav-list-left">
-                <li class="nav-item">
-                    <span>游戏</span>
-                    <div></div>
+        <canvas id="myCanvas" width="3180" height="72"></canvas>
+            <div class="nav-content">
+                <div class="nav-logo"><a href="#"></a></div>
+                <!-- 导航栏左 -->
+                <ul class="nav-list-left">
+                    <li class="nav-item">
+                        <span>游戏</span>
+                        <div></div>
+                        <ul class="nav-item-list">
+                            <li><a href="#">游戏信息</a></li>
+                            <li><a href="#">角色</a></li>
+                            <li><a href="#">星球</a></li>
+                            <li><a href="#">新闻</a></li>
+                            <li><a href="#">时间线</a></li>
+                        </ul>
+                    </li>
 
-                    <ul class="nav-item-list">
-                        <li><a href="#">游戏信息</a></li>
-                        <li><a href="#">角色</a></li>
-                        <li><a href="#">星球</a></li>
-                        <li><a href="#">新闻</a></li>
-                        <li><a href="#">时间线</a></li>
-                    </ul>
-                </li>
+                    <li class="nav-item">
+                        <span>媒体</span>
+                    </li>
 
-                <li class="nav-item">
-                    <span>媒体</span>
-                </li>
+                    <li class="nav-item">
+                        <span>局内人</span>
+                        <div></div>
+                        <ul class="nav-item-list">
+                            <li><a href="#">我的档案</a></li>
+                            <li><a href="#">活动</a></li>
+                            <li><a href="#">奖励</a></li>
+                            <li><a href="#">兑换代码</a></li>
+                            <li><a href="#">计划详情</a></li>
+                        </ul>
+                    </li>
 
-                <li class="nav-item">
-                    <span>局内人</span>
-                    <div></div>
-                    <ul class="nav-item-list">
-                        <li><a href="#">我的档案</a></li>
-                        <li><a href="#">活动</a></li>
-                        <li><a href="#">奖励</a></li>
-                        <li><a href="#">兑换代码</a></li>
-                        <li><a href="#">计划详情</a></li>
-                    </ul>
-                </li>
+                    <li class="nav-item">
+                        <span>社区</span>
+                        <div></div>
+                        <ul class="nav-item-list long">
+                            <li><a href="#">粉丝创意</a></li>
+                            <li><a href="#">无主之地论坛</a></li>
+                        </ul>
+                    </li>
 
-                <li class="nav-item">
-                    <span>社区</span>
-                    <div></div>
-                    <ul class="nav-item-list long">
-                        <li><a href="#">粉丝创意</a></li>
-                        <li><a href="#">无主之地论坛</a></li>
-                    </ul>
-                </li>
+                    <li class="nav-item shift-item">
+                        <span class="shift"></span>
+                        <span class="shift-nosee"></span>
+                        <div></div>
+                        <ul class="nav-item-list">
+                            <li><a href="#">档案</a></li>
+                            <li><a href="#">兑换代码</a></li>
+                            <li><a href="#">登出</a></li>
+                        </ul>
+                    </li>
+                </ul>
 
-                <li class="nav-item shift-item">
-                    <span class="shift"></span>
-                    <span class="shift-nosee"></span>
-                    <div></div>
-                    <ul class="nav-item-list">
-                        <li><a href="#">档案</a></li>
-                        <li><a href="#">兑换代码</a></li>
-                        <li><a href="#">登出</a></li>
-                    </ul>
-                </li>
-            </ul>
+                <!-- 导航栏右 -->
+                <ul class="nav-list-right">
+                    <li class="nav-item language-item">
+                        <span class="language"></span>
+                        <span class="language-nosee"></span>
+                        <span></span>
+                        <div></div>
+                        <ul class="nav-item-list long">
+                            <li><a href="#">简体中文</a></li>
+                            <li><a href="#">ENGLISH</a></li>
+                            <li><a href="#">FRANÇAIS</a></li>
+                            <li><a href="#">ITALIANO</a></li>
+                            <li><a href="#">DEUTSCH</a></li>
+                            <li><a href="#">ESPAÑOL (EU)</a></li>
+                            <li><a href="#">ESPAÑOL (LATAM)</a></li>
+                            <li><a href="#">PORTUGUÊS</a></li>
+                            <li><a href="#">日本語</a></li>
+                            <li><a href="#">한국어</a></li>
+                            <li><a href="#">繁體中文</a></li>
+                        </ul>
+                    </li>
 
-            <!-- 导航栏右 -->
-            <ul class="nav-list-right">
-                <li class="nav-item language-item">
-                    <span class="language"></span>
-                    <span class="language-nosee"></span>
-                    <span></span>
-                    <div></div>
-                    <ul class="nav-item-list long">
-                        <li><a href="#">简体中文</a></li>
-                        <li><a href="#">ENGLISH</a></li>
-                        <li><a href="#">FRANÇAIS</a></li>
-                        <li><a href="#">ITALIANO</a></li>
-                        <li><a href="#">DEUTSCH</a></li>
-                        <li><a href="#">ESPAÑOL (EU)</a></li>
-                        <li><a href="#">ESPAÑOL (LATAM)</a></li>
-                        <li><a href="#">PORTUGUÊS</a></li>
-                        <li><a href="#">日本語</a></li>
-                        <li><a href="#">한국어</a></li>
-                        <li><a href="#">繁體中文</a></li>
-                    </ul>
-                </li>
-
-                <!-- 按钮 -->
-                <li class="btn nav-button">
-                    <div class="btn-rl nav-button-left"></div>
-                    <div class="btn-center nav-button-center">
-                        立即购买
-                    </div>
-                    <div class="btn-rl nav-button-right"></div>
-                </li>
-            </ul>
-        </div>
+                    <!-- 按钮 -->
+                    <li class="btn nav-button">
+                        <div class="btn-rl nav-button-left"></div>
+                        <div class="btn-center nav-button-center">
+                            立即购买
+                        </div>
+                        <div class="btn-rl nav-button-right"></div>
+                    </li>
+                </ul>
+            </div>
     </nav>
 
 
@@ -133,33 +133,43 @@
         </video>
     </div>
 
-    <!-- 游戏评价 -->   
+    <!-- 游戏评价 -->
     <div class="game-reviews">
         <div class="game-reviews-bg">
-                <div class="game-reviews-content">
-                    <h3>"A HALLMARK OF EXCELLENCE" - 9/10</h3>
-                    <h4>- Destructoid</h4>
-                </div>
+            <div class="game-reviews-content">
+                <h3>"A HALLMARK OF EXCELLENCE" - 9/10</h3>
+                <h4>- Destructoid</h4>
+            </div>
 
-                <div class="game-reviews-content">
-                    <h3>"AN ABSOLUTE MASTERPIECE" - 9/10</h3>
-                    <h4>- Shacknews</h4>
-                </div>
+            <div class="game-reviews-content">
+                <h3>"AN ABSOLUTE MASTERPIECE" - 9/10</h3>
+                <h4>- Shacknews</h4>
+            </div>
 
-                <div class="game-reviews-content">
-                    <h3>"ITS ARSENAL OF FUN IS UNMATCHED" - 9/10</h3>
-                    <h4>- IGN</h4>
-                </div>
+            <div class="game-reviews-content">
+                <h3>"ITS ARSENAL OF FUN IS UNMATCHED" - 9/10</h3>
+                <h4>- IGN</h4>
+            </div>
 
-                <div class="game-reviews-content">
-                    <h3>"AN ABSOLUTE BLAST" - 4/5</h3>
-                    <h4>- USGamer</h4>
-                </div>
+            <div class="game-reviews-content">
+                <h3>"AN ABSOLUTE BLAST" - 4/5</h3>
+                <h4>- USGamer</h4>
+            </div>
         </div>
     </div>
 
+
+    <!-- 精选 -->
+    <div class="game-handpick">
+        <canvas id="canvas-gh" width="3180" height="930"></canvas>
+
+    </div>
+
+
+
     <!-- 导入js文件 -->
     <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/canvas.js"></script>
     <script src="./js/index.js"></script>
 </body>
 

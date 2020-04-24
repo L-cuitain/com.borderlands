@@ -13,35 +13,47 @@ $('.nav-content>ul>li').on({
         let autoHeight = 44 * index;
 
         //设置高度
-        let autoWidth = 0;        
+        let autoWidth = 0;
 
         //判断是否存在类名
-        if($(this).children('ul').hasClass('long')){
+        if ($(this).children('ul').hasClass('long')) {
             autoWidth = 140;
-        }else{
+        } else {
             autoWidth = 120;
         }
 
         //添加动画
-        $(this).children('ul').stop().show().animate({width: autoWidth,height : autoHeight}, 400,function(){
+        $(this).children('ul').stop().show().animate({
+            width: autoWidth,
+            height: autoHeight
+        }, 400, function () {
             //添加li逐渐显示动画
-            $(this).children('li:first-child').fadeIn(200,function f1(){
-                $(this).next().fadeIn(200,f1);
+            $(this).children('li:first-child').fadeIn(200, function f1() {
+                $(this).next().fadeIn(200, f1);
             })
 
-            $(this).children('li:first-child').animate({left : 0},100,function f1(){
-                $(this).next().animate({left : 0},100,f1);
+            $(this).children('li:first-child').animate({
+                left: 0
+            }, 100, function f1() {
+                $(this).next().animate({
+                    left: 0
+                }, 100, f1);
             })
         });
     },
 
     //鼠标移出事件
     'mouseleave': function () {
-        $(this).children('ul').stop().hide().css({width: 0 , height: 0});
+        $(this).children('ul').stop().hide().css({
+            width: 0,
+            height: 0
+        });
         // $(this).children('ul').children().toggle(20);
 
         // $(this).children('ul').hide();
-        $(this).children('ul').stop().children().hide().css({left : 10});
+        $(this).children('ul').stop().children().hide().css({
+            left: 10
+        });
     }
 })
 
@@ -84,18 +96,24 @@ $('.language-item').on({
 //获取元素个数
 let len = $('.game-reviews-content').length;
 
-$('.game-reviews-content').eq(0).fadeIn().animate({left : 140},200);
+$('.game-reviews-content').eq(0).fadeIn().animate({
+    left: 140
+}, 200);
 
 //设置计数器
 let count = 1;
 
-let timer = setInterval(function(){
+let timer = setInterval(function () {
 
-    if(count == len){
+    if (count == len) {
         count = 0;
     }
 
-    $('.game-reviews-content').eq(count).fadeIn().animate({left : 140},200).siblings().hide().css({left : 120});
+    $('.game-reviews-content').eq(count).fadeIn().animate({
+        left: 140
+    }, 200).siblings().hide().css({
+        left: 120
+    });
 
     count++;
-},6000)
+}, 6000)
