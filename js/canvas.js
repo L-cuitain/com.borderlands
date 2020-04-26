@@ -4,7 +4,8 @@ var ctxnv = document.querySelector('#myCanvas').getContext('2d');
 //新建路径
 ctxnv.beginPath();
 //绘制不规则矩形
-drawnv(ctxnv,0, 0, 158, 72, 1340, 3180, 'rgba(0,0,0,0.5)', 'rgba(0,0,0,0.5)')
+drawnv(ctxnv, 0, 0, 158, 72, 1340, 3180, 'rgba(0,0,0,0.5)', 'rgba(0,0,0,0.75)')
+
 
 
 //获取精选中的canvas
@@ -18,10 +19,10 @@ let img = new Image();
 img.src = './images/index/highlights-bg.webp';
 
 //加载图片
-var pattern = ctxgh.createPattern(img,'repeat');
-//调用函数 
-drawdv(ctxgh,0, 0, 158, 930, 1340, 3180, 'rgba(0,0,0,1)',pattern)
-
+window.onload = function () {
+    //调用函数 
+    drawdv(ctxgh, 0, 0, 158, 1050, 1340, 3180, '#019ef9', img)
+}
 
 
 
@@ -33,7 +34,7 @@ drawdv(ctxgh,0, 0, 158, 930, 1340, 3180, 'rgba(0,0,0,1)',pattern)
 //height Y轴第一次移动距离
 //courseX 过程中需要移动的距离
 //stopX X轴终止时的距离
-function drawnv(ctx,startX, startY, width, height, courseX, stopX, strokeStyle, fillStyle) {
+function drawnv(ctx, startX, startY, width, height, courseX, stopX, strokeStyle, fillStyle) {
     //使用moveTo设置起始值
     ctx.moveTo(startX, startY);
     //移动指定坐标
@@ -67,7 +68,7 @@ function drawnv(ctx,startX, startY, width, height, courseX, stopX, strokeStyle, 
 //height Y轴第一次移动距离
 //courseX 过程中需要移动的距离
 //stopX X轴终止时的距离
-function drawdv(ctx,startX, startY, width, height, courseX, stopX, strokeStyle, fillStyle) {
+function drawdv(ctx, startX, startY, width, height, courseX, stopX, fillStyle,img) {
     //使用moveTo设置起始值
     ctx.moveTo(startX, startY);
     //移动指定坐标
@@ -82,20 +83,25 @@ function drawdv(ctx,startX, startY, width, height, courseX, stopX, strokeStyle, 
     ctx.lineTo(courseX - 45, 60);
     ctx.lineTo(width + 60, 60);
     ctx.lineTo(width, startY);
+    //裁剪画布
+    ctx.clip();
 
     //关闭路径
     ctx.closePath();
 
-    //描边颜色
-    ctx.strokeStyle = strokeStyle;
-    //描边
-    ctx.stroke();
+    // //描边颜色
+    // ctx.strokeStyle = strokeStyle;
+    // //描边
+    // ctx.stroke();
 
-    //填充颜色
+``
+    // 填充颜色
     ctx.fillStyle = fillStyle;
-    //填充
+    // 填充
     ctx.fill();
-    
+
     // ctx.fillRect(0, 0, 1590, 930);
+    //绘制背景图
+    ctx.drawImage(img, -240, 0);
 
 }

@@ -117,3 +117,38 @@ let timer = setInterval(function () {
 
     count++;
 }, 6000)
+
+
+//创建精品板块鼠标移入移出事件
+$('.game-handpick-news').on({'mouseenter':function(){   
+    
+    //放大图片
+    $(this).find('img').addClass('img-change');
+
+    $(this).find('.mask-layer').css({'backgroundColor' : 'rgba(0,0,0,0.75)'})
+
+    $(this).find('.newsimg-title').css({'bottom' : 8});
+},
+'mouseleave' : function(){
+    //缩小图片
+    $(this).find('img').removeClass('img-change');
+
+    $(this).find('.mask-layer').css({'backgroundColor' : 'rgba(0,0,0,0.15)'})
+
+    $(this).find('.newsimg-title').css({'bottom' : 0});
+}},'.game-handpick-new')
+
+
+
+//创建页面滚动事件
+$(document).on('scroll',function(){
+    //获取页面滚动高度
+    let pageY = $(this).scrollTop();    
+
+    if(pageY >= 3200){
+        pageY = 3200;
+    }
+
+    //将背景图跟随页面滚动
+    $('.index-bg').css({'bottom' : -pageY+1300});
+})

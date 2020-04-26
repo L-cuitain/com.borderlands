@@ -14,7 +14,7 @@ h1,h2,h3,h4,h5,h6{
     margin: 0;
     font-weight: 400;
     color: #ffea02;
-    font-family: countach-italic,sans-serif;
+    font-family: borderland,sans-serif;
     text-transform: uppercase;
     line-height: .95;
 }
@@ -50,7 +50,7 @@ a{
 .btn-center{
     float: left;
     font-size: 20px;
-    font-family: countach-italic,sans-serif;
+    font-family: borderland,sans-serif;
     background-size: 100% 100%;
     text-align: center;
 }
@@ -65,7 +65,7 @@ a{
     width: 100%;
     height: 72px;
     box-sizing: border-box;
-    z-index: 1;
+    z-index: 99;
     /* overflow: hidden; */
 }
 
@@ -115,7 +115,7 @@ a{
 
 .nav-item span{
     color: #fff;
-    font-size: 18px;
+    font-size: 19px;
     transition: all 0.6s;
 }
 
@@ -441,8 +441,189 @@ a{
     bottom: 61px;
     float: left;
     width: 100%;
-    height: 930px;
+    height: 1050px;
     padding-bottom: 60px;
     box-sizing: border-box;
     overflow: hidden;
+}
+
+.game-handpick-content{
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    height: 810px;
+    padding: 60px 0;
+}
+
+.game-handpick-title{
+    float: left;
+    width: 100%;
+    height: 40px;
+    padding-bottom: 45px;
+    font-weight: 400;
+    text-align: center;
+    text-shadow: 1px 1px 2px #000;
+    font-size: 42px;
+    color: #ffea02;
+    font-family: borderland,sans-serif;
+    line-height: .95;
+}
+
+.game-handpick-news{
+    float: left;
+    margin: 0 322px;
+    width: 845px;
+    height: 740px;
+    padding: 0 15px;
+}
+
+.game-handpick-firstnews{
+    width: 815px;
+    height: 458px;
+    padding: 15px;
+}
+
+.game-handpick-boxup{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;    
+}
+
+
+.game-handpick-news-content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+.mask-layer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.15);
+    transition: all 0.4s;
+}
+
+
+.game-handpick-news-content img{
+    width: 100%;
+    height: 100%;
+    transition: all 0.8s;
+}
+
+.img-change{
+    transform: scale(1.05); 
+}
+
+
+.newsimg-bg{
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    width: 100%;
+    height: 103px;
+    background: linear-gradient(180deg,transparent,rgba(0,0,0,.75) 50%);
+}
+
+.hx-px{
+    height: 148px;
+}
+
+.newsimg-title{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    padding: 4px 20px;
+    box-sizing: border-box;
+    transition: all 0.8s;
+}
+
+.newsimg-title-top{  
+    width: 100%;
+    height: 14px;
+    margin-bottom: 2px;
+    font-weight: 700;
+    color: #019ef9;
+    font-size: 13px;
+}
+
+.newsimg-title-bottom{
+    width: 100%;
+    /* height: auto; */
+    font-size: 30px;
+    font-family: borderland,sans-serif;
+    color: #ffffff;
+}
+
+.game-handpick-othernews{
+    float: left;
+    width: 392px;
+    height: 220px;
+    padding: 15px;
+}
+
+
+/* 其他内容 */
+.other{
+    position: relative;
+    bottom: -1062px;
+    width: 100%;
+    height: 610px;
+}
+
+
+.other-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background-repeat: repeat-x;
+}
+
+.index-bg{
+    position: absolute;
+    width: 100%;
+    height: 2016px;
+    z-index: -999;
+    background-image: url(../images/index/bg-grunge.webp);
+}
+
+.bg-top{
+    background-position: top;
+    background-image: url(../images/index/bg-grunge-top.hq.webp);
+}
+
+.bg-bottom{
+    background-position: bottom;
+    background-image: url(../images/index/bg-grunge-bottom.hq.webp);
+}
+
+
+.other-content{
+    width: 100%;
+    height: 490px;
+    padding: 60px 0;
+}
+
+.other-contain{
+    width: 1180px;
+    height: 430px;
+    padding: 0 10px;
+    margin: 0 160px;
+}
+
+.other-contain h3{
+    width: 100%;
+    height: 40px;
+    padding-bottom: 60px;
+    font-size: 42px;
+    font-weight: 400;
+    color: #ffea02;
+    font-family: borderland,sans-serif;
+    text-align: center;
 }
