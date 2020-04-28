@@ -32,12 +32,14 @@ h1,h2,h3,h4,h5,h6{
     line-height: .95;
 }
 
+/* 列表 */
 ul{
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
+/* a标签 */
 a{
  text-decoration:none;
 }
@@ -68,20 +70,33 @@ a{
     text-align: center;
 }
 
+/* p标签 */
+p{
+    margin: 0;
+}
+
+
 .yya{
     position: fixed;
     top: 0;
 }
 
+.sildeUp{
+    top: 0px;
+}
+
+.sildeDown{
+    top: -70px;
+}
+
 
 /* 导航 */
 .nav{
-    position: fixed;
-    top: 0;
     width: 100%;
     height: 72px;
     box-sizing: border-box;
     z-index: 99;
+    transition: all 0.5s;
 }
 
 .nav-content{
@@ -889,7 +904,7 @@ a{
     top: -60px;
     float: left;
     width: 100%;
-    height: 561px;
+    height: 442px;
 }
 
 .community-pin{
@@ -928,10 +943,379 @@ a{
 }
 
 .community-list{
+    position: relative;
     float: left;
     width: 200px;
     height: 200px;
     margin: 15px;
     cursor: pointer;
     background-color: #000;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+
+
+.community-list img{
+    height: 100%;
+}
+
+.community-bigImg-change1{
+    position: relative;
+    left:-54px;
+}
+
+.community-bigImg-change2{
+    position: relative;
+    left: 20px;
+}
+
+.community-img-animate{
+    transform: scale(1.1); 
+}
+
+.community-list-down{
+    position: absolute;
+    bottom: 0;
+    width: 180px;
+    height: 16px;
+    padding: 30px 10px 15px;
+    line-height: 20px;
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7) 50%);
+    display: none;
+}
+
+.community-list-down a{
+    float: left;
+    width: auto;
+    height: 100%;
+    font-size: 11px;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Posterama Text Regular', Helvetica, Arial, sans-serif;
+}
+
+.community-list-down s{
+    float: left;
+    font-size: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Posterama Text Regular', Helvetica, Arial, sans-serif;
+}
+
+.community-list-down i{
+    float: right;
+    width: 16px;
+    height: 100%;
+    color: #fff;
+    font-size: 13px;
+}
+
+
+.buy{
+    float: left;
+    width: 100%;
+    height: 930px;
+    overflow: hidden;
+}
+
+.buy-pin{
+    position: relative;
+    width: 100%;
+    height: 930px;
+}
+
+.buy-content{
+    position: absolute;
+    top: 0;
+    width: 1200px;
+    height: 470px;
+    padding: 60px 0;
+    margin: 0 160px;
+}
+
+.buy-content h3{
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 42px;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.buy-content h5{
+    margin-bottom: 35px;
+    color: #fff;
+    text-align: center;
+    font-size: 26px;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.buy-versions{
+    width: 100%;
+    height: 341px;
+    margin-bottom: 20px;
+}
+
+
+.buy-versions-list{
+    float: left;
+    width: 400px;
+    height: 100%;
+}
+
+.buy-versions-list img{
+    width: 230px;
+    height: 290px;
+    margin: 0 88px 15px;
+    cursor: pointer;
+    transition: all 0.7s;
+}
+
+.buy-versions-list:hover img{
+    transform: scale(1.05); 
+}
+
+
+.buy-versions-list h5{
+    margin-bottom: 10px;
+    font-size: 26px;
+    text-align: center;
+}
+
+
+.subscription{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.subscription-content{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 270px;
+    padding: 35px 0;
+}
+
+
+.subscription-content-container{
+    width: 1040px;
+    height: 264px;
+    padding: 0 80px;
+    margin: 0 160px;
+}
+
+.px-ly{
+    width: 940px;
+    height: 264px;
+    padding: 0 50px;
+}
+
+.px-ly h3{
+    margin-top: 5px;
+    color: #fff;
+    text-align: center;
+    font-size: 42px;
+}
+
+.px-ly p{
+    margin-top: 15px;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+}
+
+.px-ly-center{
+    width: 100%;
+    height: 57px;
+    margin-top: 20px;
+}
+
+.subscription-button{
+    position: relative;
+    top: 0;
+    float: left;
+    width: 222px;
+    height: 100%;
+    /* padding: 0 20px; */
+    transition: all 0.7s;
+    transform: translateX(163%);
+}
+
+
+.subscription-button:hover{
+    top: -5px;
+}
+
+
+.subscription-btn-left{
+    width: 28px;
+    height: 100%;
+    background-image: url(../images/index/sprite-ui-1x.png);
+    background-position: 0 -329px;
+}
+
+.subscription-btn-center{
+    width: 165px;
+    height: 61px;
+    font-size: 20px;
+    color: #fff;
+    line-height: 58px;
+    font-family: borderlands,sans-serif;
+    background-image: url(../images/index/button-stroke-m.webp);
+    /* color: #009cf7; */
+}
+
+.subscription-btn-right{
+    width: 28px;
+    height: 100%;
+    background-image: url(../images/index/sprite-ui-1x.png);
+    background-position: -30px -329px;
+}
+
+
+.px-ly-down{
+    width: 100%;
+    height: 71px;
+    margin-top: 35px;
+}
+
+.px-ly-down-text{
+    width: 100%;
+    height: 25px;
+    padding-bottom: 5px;
+    color: #fff;
+    font-size: 17px;
+    font-family: borderlands,sans-serif;
+    text-align: center;
+}
+
+
+.px-ly-down-icon{
+    position: relative;
+    top: 0;
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    width: 34px;
+    height: 34px;
+    transition: all 0.7s;
+    transform: translateX(1021%);
+    opacity: 0.5;
+}
+
+.px-ly-down-icon span{
+    float: left;
+    display: block;
+    width: 34px;
+    height: 34px;
+    background-image: url(../images/index/sprite-ui-1x.png);
+    
+}
+
+.px-ly-down-icon:nth-child(2) span{
+    background-position: -36px -392px;
+}
+
+.px-ly-down-icon:nth-child(3) span{
+    background-position: -144px -392px;
+}
+
+.px-ly-down-icon:nth-child(4) span{
+    background-position: -180px -392px;
+}
+
+.px-ly-down-icon:nth-child(5) span{
+    background-position: 0 -392px;
+}
+
+.px-ly-down-icon:nth-child(6) span{
+    background-position: -72px -392px;
+}
+
+.px-ly-down-icon:hover{
+    top: -5px;
+    opacity: 1;
+}
+
+
+/* 尾部 */
+footer{
+    float: left;
+    width: 100%;
+    height: 268px;
+    background-color: #000;
+}
+
+.footer-content{
+    width: 1180px;
+    height: 116px;
+    padding: 35px 10px;
+    margin: 0 160px;
+}
+
+.footer-content-img{
+    float: left;
+    width: 200px;
+    height: 115px;
+    padding-right: 35px;
+}
+
+
+.footer-content-img img{
+    width: 200px;
+    height: 95px;
+}
+
+
+.footer-content-text{
+    float: left;
+    width: 945px;
+    height: 116px;
+}
+
+.footer-link{
+    display: block;
+    float: left;
+    font-size: 12px;
+    font-family: inherit;
+    font-weight: 700;
+    color: #ffea02;
+}
+
+.footer-content-text span{
+    display: block;
+    float: left;
+    margin: 0 5px;
+    font-size: 12px;
+    color: #ffea02;
+}
+
+.footer-content-smalltt{
+    float: left;
+    width: 100%;
+    height: 86px;
+    margin-top: 15px;
+    font-size: 9px;
+    color: #fff;
+}
+
+#click-here{
+    color: #fff;
+    font-size: 9px;
+}
+
+.brand{
+    float: left;
+    height: 47px;
+    padding: 0 454px 35px;
+}
+
+.brand-icon{
+    float: left;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.lg{
+    margin-top: 10px;
 }

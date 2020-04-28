@@ -58,6 +58,17 @@ $('.nav-content>ul>li').on({
 })
 
 
+//导航栏显示隐藏
+new Headroom(document.querySelector(".nav"), { //这里的nav-scroll改为你的导航栏的id或class
+    offset : 5, // 在元素没有固定之前，垂直方向的偏移量（以px为单位）
+        tolerance: 5, // scroll tolerance in px before state changes        
+    classes: {
+        initial: "yya",  // 当元素初始化后所设置的class
+        pinned: "sildeUp", // 向上滚动时设置的class
+        unpinned: "sildeDown" // 向下滚动时所设置的class
+    }
+}).init();
+
 
 
 //精灵图动画
@@ -138,6 +149,24 @@ $('.game-news-animate').on({'mouseenter':function(){
     $(this).find('.newsimg-title').css({'bottom' : 0});
 }},'.game-handpick-new')
 
+
+//创建社区板块鼠标移入移出事件
+$('.community-lists').on({'mouseenter' : function(){
+
+    //放大图片
+    $(this).addClass('community-img-animate');
+
+    $(this).children('.community-list-down').fadeIn(200);
+
+},
+'mouseleave' : function(){
+    //缩小图片
+    $(this).removeClass('community-img-animate');
+
+    $(this).children('.community-list-down').fadeOut(200);
+
+}
+},'.community-list')
 
 
 
