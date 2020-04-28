@@ -14,20 +14,35 @@ var ctxgh = document.querySelector('#canvas-gh').getContext('2d');
 //新建路径
 ctxgh.beginPath();
 
+
+//获取特色内容中的canvas
+var ctxfe = document.querySelector('#canvas-feat').getContext('2d');
+
+//新建路径
+ctxfe.beginPath();
+
+
 //创建图片
-let img = new Image();
-img.src = './images/index/highlights-bg.webp';
+let imggh = new Image();
+imggh.src = './images/index/highlights-bg.webp';
+
+//创建图片
+let imgfeat = new Image();
+imgfeat.src = './images/index/gamefeatures-bg.webp';
 
 //加载图片
 window.onload = function () {
     //调用函数 
-    drawdv(ctxgh, 0, 0, 158, 1050, 1340, 3180, '#019ef9', img)
+    drawdv(ctxgh, 0, 0, 158, 1050, 1340, 3180, '#019ef9', imggh)
+
+    drawfeat(ctxfe, 0, 60, 158, 922, 1340, 3180, '#019ef9', imgfeat)
 }
 
 
 
 
 
+//短距离不规则矩形
 //startX X轴起始值
 //startY Y轴起始值
 //width X轴第一次移动距离
@@ -62,13 +77,14 @@ function drawnv(ctx, startX, startY, width, height, courseX, stopX, strokeStyle,
 
 
 
+//长距离中间凹形矩形
 //startX X轴起始值
 //startY Y轴起始值
 //width X轴第一次移动距离
 //height Y轴第一次移动距离
 //courseX 过程中需要移动的距离
 //stopX X轴终止时的距离
-function drawdv(ctx, startX, startY, width, height, courseX, stopX, fillStyle,img) {
+function drawdv(ctx, startX, startY, width, height, courseX, stopX, fillStyle, img) {
     //使用moveTo设置起始值
     ctx.moveTo(startX, startY);
     //移动指定坐标
@@ -94,7 +110,7 @@ function drawdv(ctx, startX, startY, width, height, courseX, stopX, fillStyle,im
     // //描边
     // ctx.stroke();
 
-``
+    ``
     // 填充颜色
     ctx.fillStyle = fillStyle;
     // 填充
@@ -104,4 +120,47 @@ function drawdv(ctx, startX, startY, width, height, courseX, stopX, fillStyle,im
     //绘制背景图
     ctx.drawImage(img, -240, 0);
 
+}
+
+
+
+//长距离中间凸形矩形
+//startX X轴起始值
+//startY Y轴起始值
+//width X轴第一次移动距离
+//height Y轴第一次移动距离
+//courseX 过程中需要移动的距离
+//stopX X轴终止时的距离
+function drawfeat(ctx, startX, startY, width, height, courseX, stopX, fillStyle, img) {
+    //使用moveTo设置起始值
+    ctx.moveTo(startX, startY);
+    //移动指定坐标
+    ctx.lineTo(startX, height);
+    ctx.lineTo(width, height);
+    ctx.lineTo(width + 60, height + 60);
+    ctx.lineTo(courseX - 45, height + 60);
+    ctx.lineTo(courseX + 15, height);
+    ctx.lineTo(stopX, height);
+    ctx.lineTo(stopX, startY);
+    ctx.lineTo(courseX + 15, startY);
+    ctx.lineTo(courseX - 45, 0);
+    ctx.lineTo(width + 60, 0);
+    ctx.lineTo(width, startY);
+    ctx.clip();
+    //关闭路径
+    ctx.closePath();
+
+    ctx.lineWidth = 3;
+
+    // //描边颜色
+    // ctx.strokeStyle = strokeStyle;
+    // //描边
+    // ctx.stroke();
+
+    //填充颜色
+    ctx.fillStyle = fillStyle;
+    //填充
+    ctx.fill();
+
+    ctx.drawImage(img, -240, -100);
 }

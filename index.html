@@ -12,6 +12,10 @@
 </head>
 
 <body>
+    <!-- 页面整体背景 -->
+    <div class="index-bg"></div>
+
+
     <!-- 导航 -->
     <nav class="nav">
         <canvas id="myCanvas" width="3180" height="72"></canvas>
@@ -97,55 +101,61 @@
 
     <!-- 顶部 -->
     <div class="title">
-        <!-- 标题 -->
-        <div class="title-center">
-            <h3 class="title-text text-shadow">现已推出!&nbsp;&nbsp;&nbsp;“枪炮、爱情与触手”</h3>
-            <!-- 按钮 -->
-            <div class="title-buttons">
-                <div class="btn title-button">
-                    <div class="btn-rl title-button1-left"></div>
-                    <div class="btn-center title-button1-center">
-                        现在购买
+        <div class="title-pin">
+            <!-- 标题 -->
+            <div class="title-center">
+                <h3 class="title-text text-shadow">现已推出!&nbsp;&nbsp;&nbsp;“枪炮、爱情与触手”</h3>
+                <!-- 按钮 -->
+                <div class="title-buttons">
+                    <div class="btn title-button">
+                        <div class="btn-rl title-button1-left"></div>
+                        <div class="btn-center title-button1-center">
+                            现在购买
+                        </div>
+                        <div class="btn-rl title-button1-right"></div>
                     </div>
-                    <div class="btn-rl title-button1-right"></div>
-                </div>
 
-                <div class="btn title-button">
-                    <div class="btn-rl title-button2-left"></div>
-                    <div class="btn-center title-button2-center">
-                        观看预告片
+                    <div class="btn title-button">
+                        <div class="btn-rl title-button2-left"></div>
+                        <div class="btn-center title-button2-center">
+                            观看预告片
+                        </div>
+                        <div class="btn-rl title-button2-right"></div>
                     </div>
-                    <div class="btn-rl title-button2-right"></div>
                 </div>
             </div>
+            <!-- 视频 -->
+            <video muted loop='loop' autoplay=''>
+                <source src="./video/Borderlands.mp4" type="video/mp4">
+            </video>
         </div>
-        <!-- 视频 -->
-        <video muted loop='loop' autoplay=''>
-            <source src="./video/Borderlands.mp4" type="video/mp4">
-        </video>
     </div>
+
+
 
     <!-- 游戏评价 -->
     <div class="game-reviews">
-        <div class="game-reviews-bg">
-            <div class="game-reviews-content">
-                <h3>"A HALLMARK OF EXCELLENCE" - 9/10</h3>
-                <h4>- Destructoid</h4>
-            </div>
+        <div class="game-reviews-pin">
+            <div class="game-reviews-bg">
+                <div class="game-reviews-content">
+                    <h3>"A HALLMARK OF EXCELLENCE" - 9/10</h3>
+                    <h4>- Destructoid</h4>
+                </div>
 
-            <div class="game-reviews-content">
-                <h3>"AN ABSOLUTE MASTERPIECE" - 9/10</h3>
-                <h4>- Shacknews</h4>
-            </div>
+                <div class="game-reviews-content">
+                    <h3>"AN ABSOLUTE MASTERPIECE" - 9/10</h3>
+                    <h4>- Shacknews</h4>
+                </div>
 
-            <div class="game-reviews-content">
-                <h3>"ITS ARSENAL OF FUN IS UNMATCHED" - 9/10</h3>
-                <h4>- IGN</h4>
-            </div>
+                <div class="game-reviews-content">
+                    <h3>"ITS ARSENAL OF FUN IS UNMATCHED" - 9/10</h3>
+                    <h4>- IGN</h4>
+                </div>
 
-            <div class="game-reviews-content">
-                <h3>"AN ABSOLUTE BLAST" - 4/5</h3>
-                <h4>- USGamer</h4>
+                <div class="game-reviews-content">
+                    <h3>"AN ABSOLUTE BLAST" - 4/5</h3>
+                    <h4>- USGamer</h4>
+                </div>
             </div>
         </div>
     </div>
@@ -153,67 +163,69 @@
 
     <!-- 精选 -->
     <div class="game-handpick">
-        <canvas id="canvas-gh" width="3180" height="1050"></canvas>
-        <div class="game-handpick-content">
-            <!-- 标题 -->
-            <h3 class="game-handpick-title">
-                精选
-            </h3>
-            <!-- 新闻模块 -->
-            <div class="game-handpick-news">
-                <!-- 首条新闻 -->
-                <div class="game-handpick-firstnews game-handpick-new">
-                    <div class="game-handpick-boxup">
-                        <div class="game-handpick-news-content">
-                            <div class="mask-layer"></div>
-                            <img src="./images/index/Mayhem-20-960.jpg" alt="">
-                            <div class="newsimg-bg">
-                                <div class="newsimg-title">
-                                    <div class="newsimg-title-top">
-                                        新闻
-                                    </div>
-                                    <div class="newsimg-title-bottom">
-                                        《无主之地3》混乱模式2.0说明
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 次条新闻 -->
-                <div class="game-handpick-othernews game-handpick-new">
-                    <div class="game-handpick-boxup">
-                        <div class="game-handpick-news-content">
-                            <div class="mask-layer"></div>
-                            <img src="./images/index/cartels-amara-960.jpg" alt="">
-                            <div class="newsimg-bg">
-                                <div class="newsimg-title">
-                                    <div class="newsimg-title-top">
-                                        新闻
-                                    </div>
-                                    <div class="newsimg-title-bottom">
-                                        “恩怨风云”简短指南
+        <div class="game-handpick-pin">
+            <canvas id="canvas-gh" width="3180" height="1050"></canvas>
+            <div class="game-handpick-content">
+                <!-- 标题 -->
+                <h3 class="game-handpick-title">
+                    精选
+                </h3>
+                <!-- 新闻模块 -->
+                <div class="game-handpick-news game-news-animate">
+                    <!-- 首条新闻 -->
+                    <div class="game-handpick-firstnews game-handpick-new">
+                        <div class="game-handpick-boxup">
+                            <div class="game-handpick-news-content">
+                                <div class="mask-layer"></div>
+                                <img src="./images/index/Mayhem-20-960.jpg" alt="">
+                                <div class="newsimg-bg">
+                                    <div class="newsimg-title">
+                                        <div class="newsimg-title-top">
+                                            新闻
+                                        </div>
+                                        <div class="newsimg-title-bottom">
+                                            《无主之地3》混乱模式2.0说明
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- 次条新闻 -->
-                <div class="game-handpick-othernews game-handpick-new">
-                    <div class="game-handpick-boxup">
-                        <div class="game-handpick-news-content">
-                            <div class="mask-layer"></div>
-                            <img src="./images/index/PatchNotes.jpg" alt="">
-                            <div class="newsimg-bg hx-px">
-                                <div class="newsimg-title">
-                                    <div class="newsimg-title-top">
-                                        新闻
+                    <!-- 次条新闻 -->
+                    <div class="game-handpick-othernews game-handpick-new">
+                        <div class="game-handpick-boxup">
+                            <div class="game-handpick-news-content">
+                                <div class="mask-layer"></div>
+                                <img src="./images/index/cartels-amara-960.jpg" alt="">
+                                <div class="newsimg-bg">
+                                    <div class="newsimg-title">
+                                        <div class="newsimg-title-top">
+                                            新闻
+                                        </div>
+                                        <div class="newsimg-title-bottom">
+                                            “恩怨风云”简短指南
+                                        </div>
                                     </div>
-                                    <div class="newsimg-title-bottom">
-                                        BORDERLANDS 3 PATCH AND <br>HOTFIXES: APRIL 23, 2020
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 次条新闻 -->
+                    <div class="game-handpick-othernews game-handpick-new">
+                        <div class="game-handpick-boxup">
+                            <div class="game-handpick-news-content">
+                                <div class="mask-layer"></div>
+                                <img src="./images/index/PatchNotes.jpg" alt="">
+                                <div class="newsimg-bg hx-px">
+                                    <div class="newsimg-title">
+                                        <div class="newsimg-title-top">
+                                            新闻
+                                        </div>
+                                        <div class="newsimg-title-bottom">
+                                            BORDERLANDS 3 PATCH AND <br>HOTFIXES: APRIL 23, 2020
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -227,15 +239,154 @@
 
     <!-- 其他内容 -->
     <div class="other">
-        <!-- 页面整体背景 -->
-        <div class="index-bg"></div>
-        <!-- 其他内容背景 -->
-        <div class="other-bg bg-top"></div>
-        <div class="other-bg bg-bottom"></div>
-        <!-- 内容 -->
-        <div class="other-content">
-            <div class="other-contain">
-                <h3>即时新闻和更新</h3>
+        <div class="other-pin">
+            <!-- 其他内容背景 -->
+            <div class="other-bg bg-top"></div>
+            <div class="other-bg bg-bottom"></div>
+            <!-- 内容 -->
+            <div class="other-content">
+                <div class="other-contain">
+                    <h2>即时新闻和更新</h2>
+                    <div class="other-list game-news-animate">
+                        <div class="other-list-othernews game-handpick-new">
+                            <div class="game-handpick-boxup">
+                                <div class="game-handpick-news-content">
+                                    <div class="mask-layer"></div>
+                                    <img src="./images/index/PatchNotes.jpg" alt="">
+                                    <div class="newsimg-bg hx-px">
+                                        <div class="newsimg-title">
+                                            <div class="newsimg-title-top">
+                                                NEWS
+                                            </div>
+                                            <div class="newsimg-title-bottom">
+                                                BORDERLANDS 3 PATCH AND <br>HOTFIXES: APRIL 23, 2020
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="other-list-othernews game-handpick-new">
+                            <div class="game-handpick-boxup">
+                                <div class="game-handpick-news-content">
+                                    <div class="mask-layer"></div>
+                                    <img src="./images/index/ltu-960.jpg" alt="">
+                                    <div class="newsimg-bg">
+                                        <div class="newsimg-title">
+                                            <div class="newsimg-title-top">
+                                                NEWS
+                                            </div>
+                                            <div class="newsimg-title-bottom">
+                                                全新小活动！宇宙刷宝乐
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="other-list-othernews game-handpick-new">
+                            <div class="game-handpick-boxup">
+                                <div class="game-handpick-news-content">
+                                    <div class="mask-layer"></div>
+                                    <img src="./images/index/virtualbackrounds-thumb.gif" alt="">
+                                    <div class="newsimg-bg hx-px">
+                                        <div class="newsimg-title">
+                                            <div class="newsimg-title-top">
+                                                NEWS
+                                            </div>
+                                            <div class="newsimg-title-bottom">
+                                                在ZOOM视像通话中使用《无主之地》虚拟背景
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="read-more">
+                        <div class="btn other-button">
+                            <div class="btn-rl other-btn-left"></div>
+                            <div class="btn-center other-btn-center">
+                                浏览更多
+                            </div>
+                            <div class="btn-rl other-btn-right"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 特色内容 -->
+    <div class="feature">
+        <canvas id="canvas-feat" width="3180" height="981"></canvas>
+        <div class="feature-content">
+            <div class="feature-contain">
+                <h3 class="feature-content-title">
+                    《无主之地3》特色内容
+                </h3>
+                <div class="feature-content-list">
+
+                    <!-- 对应图片 -->
+                    <div class="feature-content-bigImg">
+                        <img src="./images/index/features-guns.jpg" alt="">
+                        <img src="./images/index/features-vaulthunters.jpg" alt="">
+                        <img src="./images/index/features-enemies.jpg" alt="">
+                        <img src="./images/index/features-universe.jpg" alt="">
+                    </div>
+                    <!-- 对应按钮 -->
+                    <div class="feature-content-introduce">
+                        <div class="btn feature-button">
+                            <div class="btn-rl feature-btn-left btn-left-white"></div>
+                            <div class="btn-center feature-btn-center btn-center-white">
+                                武器
+                            </div>
+                            <div class="btn-rl feature-btn-right btn-right-white"></div>
+                        </div>
+                        <div class="btn feature-button">
+                            <div class="btn-rl feature-btn-left"></div>
+                            <div class="btn-center feature-btn-center">
+                                密藏猎人
+                            </div>
+                            <div class="btn-rl feature-btn-right"></div>
+                        </div>
+                        <div class="btn feature-button">
+                            <div class="btn-rl feature-btn-left"></div>
+                            <div class="btn-center feature-btn-center">
+                                敌人
+                            </div>
+                            <div class="btn-rl feature-btn-right"></div>
+                        </div>
+                        <div class="btn feature-button">
+                            <div class="btn-rl feature-btn-left"></div>
+                            <div class="btn-center feature-btn-center">
+                                宇宙
+                            </div>
+                            <div class="btn-rl feature-btn-right"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 对应文字 -->
+                <div class="feature-content-text">
+                    <div class="feature-text-full heigh">
+                        <h3>全新的枪械！</h3>
+                        <p>《无主之地3》拥有无数尖端武器，每一把均由备受信赖、享誉银河的生产商精心打造，以便秘藏猎人从中选出适合自己的心爱利器。拥有自行式防弹护盾的武器？当然有。像火山一样喷出火舌的步枪？肯定有。拥有双腿，能追击敌人并出言不逊的奇妙武器呢？也有！</p>
+                    </div>
+                    <div class="feature-text-full heigh">
+                        <h3>全新的枪械！</h3>
+                        <p>《无主之地3》拥有无数尖端武器，每一把均由备受信赖、享誉银河的生产商精心打造，以便秘藏猎人从中选出适合自己的心爱利器。拥有自行式防弹护盾的武器？当然有。像火山一样喷出火舌的步枪？肯定有。拥有双腿，能追击敌人并出言不逊的奇妙武器呢？也有！</p>
+                    </div>
+                    <div class="feature-text-full med">
+                        <h3>全新的枪械！</h3>
+                        <p>《无主之地3》拥有无数尖端武器，每一把均由备受信赖、享誉银河的生产商精心打造，以便秘藏猎人从中选出适合自己的心爱利器。拥有自行式防弹护盾的武器？当然有。像火山一样喷出火舌的步枪？肯定有。拥有双腿，能追击敌人并出言不逊的奇妙武器呢？也有！</p>
+                    </div>
+                    <div class="feature-text-full sm">
+                        <h3>全新的枪械！</h3>
+                        <p>《无主之地3》拥有无数尖端武器，每一把均由备受信赖、享誉银河的生产商精心打造，以便秘藏猎人从中选出适合自己的心爱利器。拥有自行式防弹护盾的武器？当然有。像火山一样喷出火舌的步枪？肯定有。拥有双腿，能追击敌人并出言不逊的奇妙武器呢？也有！</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

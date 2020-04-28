@@ -120,7 +120,7 @@ let timer = setInterval(function () {
 
 
 //创建精品板块鼠标移入移出事件
-$('.game-handpick-news').on({'mouseenter':function(){   
+$('.game-news-animate').on({'mouseenter':function(){   
     
     //放大图片
     $(this).find('img').addClass('img-change');
@@ -140,15 +140,36 @@ $('.game-handpick-news').on({'mouseenter':function(){
 
 
 
+
+
 //创建页面滚动事件
 $(document).on('scroll',function(){
     //获取页面滚动高度
     let pageY = $(this).scrollTop();    
 
-    if(pageY >= 3200){
-        pageY = 3200;
-    }
-
     //将背景图跟随页面滚动
-    $('.index-bg').css({'bottom' : -pageY+1300});
+    $('.index-bg').css({'bottom' : -pageY});
+})
+
+
+//特色内容 tab功能
+$('.feature-content-bigImg>img').eq(0).show();
+//创建点击事件
+$('.feature-content-introduce').on('click','.feature-button',function(){
+    //清除按钮样式
+    $('.feature-content-introduce>.feature-button').children('.feature-btn-left').removeClass('btn-left-white');
+    $('.feature-content-introduce>.feature-button').children('.feature-btn-center').removeClass('btn-center-white');
+    $('.feature-content-introduce>.feature-button').children('.feature-btn-right').removeClass('btn-right-white');
+
+
+    //给点击的按钮添加样式
+    $(this).children('.feature-btn-left').addClass('btn-left-white');
+    $(this).children('.feature-btn-center').addClass('btn-center-white');
+    $(this).children('.feature-btn-right').addClass('btn-right-white');
+    
+    //获取索引
+    let index = $(this).index();
+
+    //显示索引对应的图片
+    $('.feature-content-bigImg>img').eq(index).fadeIn(600).siblings().fadeOut(600);
 })

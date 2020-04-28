@@ -3,6 +3,18 @@ html,body{
     padding: 0;
 }
 
+/* 整体背景 */
+.index-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -999;
+    background-image: url(../images/index/bg-grunge.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
 /* 字体 */
 @font-face{
     font-family: borderland;
@@ -294,10 +306,15 @@ a{
 
 /* 顶部 */
 .title{
-    position: relative;
     width: auto;
     height: 600px;
     overflow: hidden;
+}
+
+.title-pin{
+    position: relative;
+    width: auto;
+    height: 600px;
 }
 
 /* 中间部分 */
@@ -399,14 +416,21 @@ a{
 }
 
 
+
 /* 游戏评价 */
 .game-reviews{
     float: left;
     width: 100%;
+    height: 73px;
+    border-top: 1px solid #ffea02;
+}
+
+.game-reviews-pin{
+    width: 100%;
     height: 62px;
     padding: 35px 0 35px;
     border-top: 1px solid #ffea02;
-    background-image: url(../images/index/tvlines.jpg);   
+    background-image: url(../images/index/tvlines.jpg); 
 }
 
 .game-reviews-bg{
@@ -437,15 +461,20 @@ a{
 
 /* 精选 */
 .game-handpick{
-    position: relative;
-    bottom: 61px;
     float: left;
     width: 100%;
     height: 1050px;
-    padding-bottom: 60px;
     box-sizing: border-box;
     overflow: hidden;
 }
+
+.game-handpick-pin{
+    position: relative;
+    width: 100%;
+    height: 1050px;
+    z-index: 14;
+}
+
 
 .game-handpick-content{
     position: absolute;
@@ -571,7 +600,15 @@ a{
 /* 其他内容 */
 .other{
     position: relative;
-    bottom: -1062px;
+    top: -60px;
+    float: left;
+    width: 100%;
+    height: 492px;
+    z-index: 1;
+}
+
+.other-pin{
+    position: relative;
     width: 100%;
     height: 610px;
 }
@@ -583,14 +620,6 @@ a{
     height: 100%;
     z-index: -10;
     background-repeat: repeat-x;
-}
-
-.index-bg{
-    position: absolute;
-    width: 100%;
-    height: 2016px;
-    z-index: -999;
-    background-image: url(../images/index/bg-grunge.webp);
 }
 
 .bg-top{
@@ -611,19 +640,241 @@ a{
 }
 
 .other-contain{
+    position: relative;
     width: 1180px;
     height: 430px;
     padding: 0 10px;
     margin: 0 160px;
 }
 
-.other-contain h3{
+.other-contain h2{
+    position: absolute;
+    top: 0;
     width: 100%;
     height: 40px;
     padding-bottom: 60px;
     font-size: 42px;
-    font-weight: 400;
-    color: #ffea02;
-    font-family: borderland,sans-serif;
     text-align: center;
 }
+
+.other-list{
+    position: absolute;
+    top: 97px;
+    width: 1200px;
+    height: 233px;
+}
+
+.other-list-othernews{
+    float: left;
+    width: 380px;
+    height: 213px;
+    padding: 10px;
+}
+
+
+.read-more{
+    position: absolute;
+    top: 321px;
+    width: 1200px;
+    height: 57px;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.other-button{
+    position: absolute;
+    top: 60px;
+    width: auto;
+    height: 61px;
+    transition: all 0.7s;
+    transform: translateX(220%);
+}
+
+.other-button:hover{
+    top: 53px;
+}
+
+
+.other-btn-left{
+    width: 28px;
+    height: 61px;
+    background-image: url(../images/index/sprite-ui-1x.png);
+    background-position: -282px -236px;
+}
+
+.other-btn-center{
+    width: 165px;
+    height: 61px;
+    line-height: 60px;
+    background-image: url(../images/index/button-m.webp);
+    color: #fff;
+}
+
+.other-btn-right{
+    width: 28px;
+    height: 61px;
+    background-image: url(../images/index/sprite-ui-1x.png);
+    background-position: -312px -236px;
+}
+
+
+
+/* 特色内容 */
+.feature{
+    position: relative;
+    /* bottom: -1062px; */
+    width: 100%;
+    height: 981px;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.feature-content{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 862px;
+    padding: 60px 0;
+}
+
+.feature-contain{
+    width: 1200px;
+    height: 861px;
+    margin: 0 160px;
+}
+
+.feature-content-title{
+    width: 100%;
+    height: 40px;
+    padding-bottom: 60px;
+    font-size: 42px;
+    text-align: center;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.feature-content-list{
+    width: 915px;
+    height: 547px;
+    margin: 0 142px;
+    box-sizing: border-box;
+}
+
+.feature-content-bigImg{
+    position: relative;
+    width: 100%;
+    height: 513px;
+}
+
+.feature-content-bigImg img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.feature-content-introduce{
+    position: absolute;
+    bottom: 277px;
+    width: 920px;
+    height: 45px;
+}
+
+.feature-button{
+    position: relative;
+    top: 0;
+    float: left;
+    width: 190px;
+    height: 100%;
+    padding: 0 20px;
+    transition: all 0.7s;
+}
+
+
+.feature-button:hover{
+    top: -5px;
+}
+
+
+.feature-btn-left{
+    width: 17px;
+    height: 100%;
+    background-image: url(../images/index/sprite-ui-1x.png);
+    /* background-position: -86px -428px; */
+
+    background-position: -48px -428px;
+}
+
+.feature-btn-center{
+    width: 156px;
+    height: 47px;
+    font-size: 17px;
+    line-height: 48px;
+    font-family: borderlands,sans-serif;
+    background-image: url(../images/index/button-black-m.webp);
+    color: #009cf7;
+}
+
+.feature-btn-right{
+    width: 17px;
+    height: 100%;
+    background-image: url(../images/index/sprite-ui-1x.png);
+    background-position: -67px -428px;
+
+    /* background-position: -105px -428px; */
+}
+
+.btn-left-white{
+    background-position: -86px -428px;
+}
+
+.btn-center-white{
+    background-image: url(../images/index/button-white-m.webp);
+    color: #000;
+}
+
+.btn-right-white{
+    background-position: -105px -428px;
+}
+
+
+.feature-content-text{
+    width: 1200px;
+    height: 155px;
+    padding-top: 60px;
+}
+
+
+.feature-text-full{
+    position: absolute;
+    width: 1200px;
+}
+
+.heigh{
+    height: 155px;
+}
+
+.med{
+    height: 137px;
+}
+
+.sm{
+    height: 107px;
+}
+
+
+.feature-text-full h3{
+    color: #fff;
+    font-size: 42px;
+    text-align: center;
+}
+
+.feature-text-full p{
+    width: 608px;
+    height: auto;
+    padding:20px 80px 0;
+    margin: 0 216px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+}
+
