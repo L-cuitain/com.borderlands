@@ -12,6 +12,7 @@ html,body{
     background-image: url(../images/index/bg-grunge.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    background-attachment: fixed;
 }
 
 
@@ -67,7 +68,10 @@ a{
     text-align: center;
 }
 
-
+.yya{
+    position: fixed;
+    top: 0;
+}
 
 
 /* 导航 */
@@ -78,7 +82,6 @@ a{
     height: 72px;
     box-sizing: border-box;
     z-index: 99;
-    /* overflow: hidden; */
 }
 
 .nav-content{
@@ -618,8 +621,8 @@ a{
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: -10;
     background-repeat: repeat-x;
+    z-index: -1;
 }
 
 .bg-top{
@@ -847,6 +850,7 @@ a{
 .feature-text-full{
     position: absolute;
     width: 1200px;
+    display: none;
 }
 
 .heigh{
@@ -878,3 +882,56 @@ a{
     text-align: center;
 }
 
+
+/* 社区 */
+.community{
+    position: relative;
+    top: -60px;
+    float: left;
+    width: 100%;
+    height: 561px;
+}
+
+.community-pin{
+    position: relative;
+    width: 100%;
+    height: 561px;
+}
+
+.community-content{
+    width: 100%;
+    height: 441px;
+    padding: 60px 0;
+}
+
+.community-container{
+    width: 1200;
+    height: 321px;
+    padding: 60px 0;
+    margin: 0 160px;
+}
+
+.community-container h3{
+    float: left;
+    width: 100%;
+    height: 40px;
+    padding-bottom: 60px;
+    text-align: center;
+    font-size: 42px;
+}
+
+
+.community-lists{
+    float: left;
+    width: 100%;
+    height: 240px;
+}
+
+.community-list{
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin: 15px;
+    cursor: pointer;
+    background-color: #000;
+}

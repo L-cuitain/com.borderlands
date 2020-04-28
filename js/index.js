@@ -145,15 +145,22 @@ $('.game-news-animate').on({'mouseenter':function(){
 //创建页面滚动事件
 $(document).on('scroll',function(){
     //获取页面滚动高度
-    let pageY = $(this).scrollTop();    
+    let pageY = $(this).scrollTop(); 
+    
+    if(pageY >= $(document).scrollTop()){
+        pageY = $(document).scrollTop();
+    }
 
     //将背景图跟随页面滚动
     $('.index-bg').css({'bottom' : -pageY});
 })
 
 
+
+
 //特色内容 tab功能
 $('.feature-content-bigImg>img').eq(0).show();
+$('.feature-text-full').eq(0).show();
 //创建点击事件
 $('.feature-content-introduce').on('click','.feature-button',function(){
     //清除按钮样式
@@ -172,4 +179,7 @@ $('.feature-content-introduce').on('click','.feature-button',function(){
 
     //显示索引对应的图片
     $('.feature-content-bigImg>img').eq(index).fadeIn(600).siblings().fadeOut(600);
+
+    //显示对应的文字
+    $('.feature-text-full').eq(index).fadeIn(600).siblings().fadeOut(600);
 })
