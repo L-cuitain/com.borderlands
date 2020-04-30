@@ -68,3 +68,23 @@ $('.nav-content>ul>li').on({
         });
     }
 })
+
+
+$('.shift-item').on({'mouseenter':function(){
+    console.log($(this).children('.shift'));
+    
+    $(this).children('.shift').css({'backgroundPositionX' : '-150px' , 'backgroundPositionY' : '-300px'})
+},
+'mouseleave' : function(){
+    $(this).children('.shift').css({'backgroundPositionX' : '-230px' , 'backgroundPositionY' : '-300px'})
+}
+})
+
+$('.language-item').on({'mouseenter':function(){
+    $(this).children('.language').css({'backgroundPositionX' : '-296px' , 'backgroundPositionY' : '-392p'})
+},
+'mouseleave' : function(){
+    $(this).children('.language').css({'backgroundPositionX' : '-317px' , 'backgroundPositionY' : '-392p'})
+}
+})
+

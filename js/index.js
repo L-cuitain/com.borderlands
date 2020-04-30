@@ -66,38 +66,6 @@ window.onload = function () {
 }
 
 
-
-//精灵图动画
-$('.shift-item').on({
-    'mouseenter': function () {
-        $('.shift').fadeOut(0, function () {
-            $('.shift-nosee').fadeIn(200);
-        });
-
-    },
-    'mouseleave': function () {
-        $('.shift-nosee').fadeOut(0, function () {
-            $('.shift').fadeIn(200);
-        });
-    },
-})
-
-
-$('.language-item').on({
-    'mouseenter': function () {
-        $('.language').fadeOut(0, function () {
-            $('.language-nosee').fadeIn(200);
-        });
-
-    },
-    'mouseleave': function () {
-        $('.language-nosee').fadeOut(0, function () {
-            $('.language').fadeIn(200);
-        });
-    },
-})
-
-
 //定时器动画
 
 //获取元素个数

@@ -1,4 +1,4 @@
-main{
+main {
     float: left;
     width: 100%;
     height: 1407px;
@@ -8,38 +8,266 @@ main{
     background-attachment: fixed;
 }
 
-.main-pin{
+.main-pin {
     position: relative;
     width: 100%;
     height: 100%;
 }
 
-.main-header{
+.main-header {
     position: absolute;
     top: 0;
     width: 100%;
     height: 1019px;
 }
 
-.main-header-notch{
+.main-header-notch {
     width: 100%;
     height: 100%;
     padding-top: 47px;
 }
 
-.main-content{
+.main-content {
     width: 100%;
     height: 901px;
     padding: 60px 0;
 }
 
 
-.main-content h1{
+.main-content h1 {
     width: 100%;
     height: 66px;
     padding-bottom: 20px;
     text-align: center;
     font-size: 70px;
-    text-shadow: -3px 3px 6px rgba(4,226,255,.5), -2px 2px 1px #000;
-    
+    text-shadow: -3px 3px 6px rgba(4, 226, 255, .5), -2px 2px 1px #000;
 }
+
+.main-content-container {
+    width: 1200px;
+    height: 748px;
+    margin: 0 165px;
+}
+
+.main-content-center {
+    float: left;
+    width: 1140px;
+    height: 49px;
+    padding: 0 15px;
+    margin: 0 15px;
+}
+
+.main-text-center {
+    float: left;
+    width: 100%;
+    height: 47px;
+}
+
+.main-btn-lists {
+    margin: 0 auto;
+    width: 690px;
+    height: 100%;
+}
+
+
+.feature-button {
+    position: relative;
+    top: 0;
+    float: left;
+    width: 200px;
+    height: 47px;
+    margin: 0 15px 0;
+    transition: all 0.8s;
+}
+
+
+.feature-button:hover {
+    top: -3px;
+}
+
+
+.feature-btn-left {
+    width: 17px;
+    height: 100%;
+    background-image: url(../images/index/sprite-ui-1x.png);
+    /* background-position: -86px -428px; */
+
+    background-position: -48px -428px;
+}
+
+.feature-btn-center {
+    width: 165px;
+    height: 47px;
+    font-size: 18px;
+    line-height: 48px;
+    font-family: borderlands, sans-serif;
+    background-image: url(../images/index/button-black-m.webp);
+    color: #009cf7;
+}
+
+.feature-btn-right {
+    width: 17px;
+    height: 100%;
+    background-image: url(../images/index/sprite-ui-1x.png);
+    background-position: -67px -428px;
+
+    /* background-position: -105px -428px; */
+}
+
+.btn-left-white {
+    background-position: -86px -428px;
+}
+
+.btn-center-white {
+    background-image: url(../images/index/button-white-m.webp);
+}
+
+.btn-right-white {
+    background-position: -105px -428px;
+}
+
+
+.media-list {
+    float: left;
+    width: auto;
+    height: 748px;
+    padding: 15px 15px 0;
+    box-sizing: border-box;
+}
+
+.main-img-lists,
+.main-download-lists {
+    display: none;
+}
+
+.main-lists-page {
+    width: 1200px;
+    height: 700px;
+}
+
+
+/* 板块列表 */
+.main-list-othernews {
+    float: left;
+    width: 360px;
+    height: 202px;
+    padding: 15px;
+}
+
+
+.game-handpick-boxup {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.game-handpick-news-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+.video-player {
+    position: absolute;
+    top: 75px;
+    left: 150px;
+    width: 48px;
+    height: 38px;
+    background-image: url(../images/index/sprite-ui-1x.png);
+    background-position: -242px -150px;
+    z-index: 11;
+}
+
+.mask-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.15);
+    transition: all 0.4s;
+}
+
+
+.game-handpick-news-content img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.8s;
+}
+
+.img-change {
+    transform: scale(1.05);
+}
+
+
+.newsimg-bg {
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    width: 100%;
+    height: 103px;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, .75) 50%);
+}
+
+.hx-px {
+    height: 148px;
+}
+
+.newsimg-title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    padding: 4px 20px;
+    box-sizing: border-box;
+    transition: all 0.8s;
+}
+
+.newsimg-title-bottom {
+    width: 100%;
+    /* height: auto; */
+    text-align: left;
+    font-size: 30px;
+    font-family: borderland, sans-serif;
+    color: #ffffff;
+}
+
+.lists-page-count {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    float: left;
+    width: 100%;
+    height: 21px;
+    margin: 0;
+    padding: 0;
+    padding: 15px 0;
+    text-align: center;
+    list-style: none;
+}
+
+.lists-page-count li {
+    float: left;
+    width: 16px;
+    height: 19px;
+    margin: 0 5px;
+    background-image: url(../images/index/sprite-ui-1x.png);
+    cursor: pointer;
+}
+
+.lists-page-count li:hover{
+    background-position: -180px -428px;
+}
+
+.list-count-black{
+    background-position: -162px -428px;
+}
+
+.list-count-white{
+    background-position: -180px -428px;
+}
+
+
