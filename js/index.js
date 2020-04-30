@@ -1,73 +1,69 @@
-//鼠标移入导航栏列表某一项时 显示下拉列表
-$('.nav-content>ul>li').on({
-    'mouseenter': function () {
+// canvas画布
+//canvas画布
+//获取导航栏的canvas
+var ctxnv = document.querySelector('#myCanvas').getContext('2d');
 
-        $('.nav-content>ul>li').children('ul').each(function (i) {
-            $(this).eq(i).hide();
+//新建路径
+ctxnv.beginPath();
 
-        })
+//获取精选中的canvas
+var ctxgh = document.querySelector('#canvas-gh').getContext('2d');
 
-        //获取ul中li的个数
-        let index = $(this).children('ul').children('li').length;
-        //设置自动高度
-        let autoHeight = 44 * index;
-
-        //设置高度
-        let autoWidth = 0;
-
-        //判断是否存在类名
-        if ($(this).children('ul').hasClass('long')) {
-            autoWidth = 140;
-        } else {
-            autoWidth = 120;
-        }
-
-        //添加动画
-        $(this).children('ul').stop().show().animate({
-            width: autoWidth,
-            height: autoHeight
-        }, 400, function () {
-            //添加li逐渐显示动画
-            $(this).children('li:first-child').fadeIn(200, function f1() {
-                $(this).next().fadeIn(200, f1);
-            })
-
-            $(this).children('li:first-child').animate({
-                left: 0
-            }, 100, function f1() {
-                $(this).next().animate({
-                    left: 0
-                }, 100, f1);
-            })
-        });
-    },
-
-    //鼠标移出事件
-    'mouseleave': function () {
-        $(this).children('ul').stop().hide().css({
-            width: 0,
-            height: 0
-        });
-        // $(this).children('ul').children().toggle(20);
-
-        // $(this).children('ul').hide();
-        $(this).children('ul').stop().children().hide().css({
-            left: 10
-        });
-    }
-})
+//新建路径
+ctxgh.beginPath();
 
 
-//导航栏显示隐藏
-new Headroom(document.querySelector(".nav"), { //这里的nav-scroll改为你的导航栏的id或class
-    offset : 5, // 在元素没有固定之前，垂直方向的偏移量（以px为单位）
-        tolerance: 5, // scroll tolerance in px before state changes        
-    classes: {
-        initial: "yya",  // 当元素初始化后所设置的class
-        pinned: "sildeUp", // 向上滚动时设置的class
-        unpinned: "sildeDown" // 向下滚动时所设置的class
-    }
-}).init();
+//获取主页面特色内容中的canvas
+var ctxfe = document.querySelector('#canvas-feat').getContext('2d');
+
+//新建路径
+ctxfe.beginPath();
+
+
+//获取主页面购买中的canvas
+var ctxby = document.querySelector('#canvas-buy').getContext('2d');
+
+//新建路径
+ctxby.beginPath();
+
+
+//获取页面订阅中的canvas
+var ctxsub = document.querySelector('#canvas-sub').getContext('2d');
+
+//新建路径
+ctxsub.beginPath();
+
+//创建图片
+let imggh = new Image();
+imggh.src = './images/index/highlights-bg.webp';
+
+//创建图片
+let imgfeat = new Image();
+imgfeat.src = './images/index/gamefeatures-bg.webp';
+
+//创建图片
+let imgby = new Image();
+imgby.src = './images/index/footer-bg.webp';
+
+
+//加载图片
+window.onload = function () {
+    //调用函数 
+    //绘制不规则矩形
+    //调用函数 
+    //绘制不规则矩形
+    drawDownAoS(ctxnv, 0, 0, 158, 72, 1340, 3180, 'rgba(0,0,0,0.5)', 'rgba(0,0,0,0.75)');
+
+    drawCenAo(ctxgh, 0, 0, 158, 1050, 1340, 3180, '#019ef9', imggh);
+
+    drawCenTu(ctxfe, 0, 60, 158, 922, 1340, 3180, '#019ef9');
+    ctxfe.drawImage(imgfeat, 0, 0, 1519, 982);
+
+    drawUpTu(ctxby, 0, 60, 158, 930, 1340, 3180, '#019ef9');
+    ctxby.drawImage(imgby, 0, 0, 1519, 930);
+
+    drawUpAo(ctxsub, 0, 0, 158, 400, 1340, 3180, '#019ef9', 'rgba(0,0,0,0.75)');
+}
 
 
 
@@ -131,57 +127,70 @@ let timer = setInterval(function () {
 
 
 //创建精品板块鼠标移入移出事件
-$('.game-news-animate').on({'mouseenter':function(){   
-    
-    //放大图片
-    $(this).find('img').addClass('img-change');
+$('.game-news-animate').on({
+    'mouseenter': function () {
 
-    $(this).find('.mask-layer').css({'backgroundColor' : 'rgba(0,0,0,0.75)'})
+        //放大图片
+        $(this).find('img').addClass('img-change');
 
-    $(this).find('.newsimg-title').css({'bottom' : 8});
-},
-'mouseleave' : function(){
-    //缩小图片
-    $(this).find('img').removeClass('img-change');
+        $(this).find('.mask-layer').css({
+            'backgroundColor': 'rgba(0,0,0,0.75)'
+        })
 
-    $(this).find('.mask-layer').css({'backgroundColor' : 'rgba(0,0,0,0.15)'})
+        $(this).find('.newsimg-title').css({
+            'bottom': 8
+        });
+    },
+    'mouseleave': function () {
+        //缩小图片
+        $(this).find('img').removeClass('img-change');
 
-    $(this).find('.newsimg-title').css({'bottom' : 0});
-}},'.game-handpick-new')
+        $(this).find('.mask-layer').css({
+            'backgroundColor': 'rgba(0,0,0,0.15)'
+        })
+
+        $(this).find('.newsimg-title').css({
+            'bottom': 0
+        });
+    }
+}, '.game-handpick-new')
 
 
 //创建社区板块鼠标移入移出事件
-$('.community-lists').on({'mouseenter' : function(){
+$('.community-lists').on({
+    'mouseenter': function () {
 
-    //放大图片
-    $(this).addClass('community-img-animate');
+        //放大图片
+        $(this).addClass('community-img-animate');
 
-    $(this).children('.community-list-down').fadeIn(200);
+        $(this).children('.community-list-down').fadeIn(200);
 
-},
-'mouseleave' : function(){
-    //缩小图片
-    $(this).removeClass('community-img-animate');
+    },
+    'mouseleave': function () {
+        //缩小图片
+        $(this).removeClass('community-img-animate');
 
-    $(this).children('.community-list-down').fadeOut(200);
+        $(this).children('.community-list-down').fadeOut(200);
 
-}
-},'.community-list')
+    }
+}, '.community-list')
 
 
 
 
 //创建页面滚动事件
-$(document).on('scroll',function(){
+$(document).on('scroll', function () {
     //获取页面滚动高度
-    let pageY = $(this).scrollTop(); 
-    
-    if(pageY >= $(document).scrollTop()){
+    let pageY = $(this).scrollTop();
+
+    if (pageY >= $(document).scrollTop()) {
         pageY = $(document).scrollTop();
     }
 
     //将背景图跟随页面滚动
-    $('.index-bg').css({'bottom' : -pageY});
+    $('.index-bg').css({
+        'bottom': -pageY
+    });
 })
 
 
@@ -191,7 +200,7 @@ $(document).on('scroll',function(){
 $('.feature-content-bigImg>img').eq(0).show();
 $('.feature-text-full').eq(0).show();
 //创建点击事件
-$('.feature-content-introduce').on('click','.feature-button',function(){
+$('.feature-content-introduce').on('click', '.feature-button', function () {
     //清除按钮样式
     $('.feature-content-introduce>.feature-button').children('.feature-btn-left').removeClass('btn-left-white');
     $('.feature-content-introduce>.feature-button').children('.feature-btn-center').removeClass('btn-center-white');
@@ -202,7 +211,7 @@ $('.feature-content-introduce').on('click','.feature-button',function(){
     $(this).children('.feature-btn-left').addClass('btn-left-white');
     $(this).children('.feature-btn-center').addClass('btn-center-white');
     $(this).children('.feature-btn-right').addClass('btn-right-white');
-    
+
     //获取索引
     let index = $(this).index();
 

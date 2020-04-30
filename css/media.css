@@ -1,0 +1,45 @@
+main{
+    float: left;
+    width: 100%;
+    height: 1407px;
+    background-image: url(../images/media/media-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.main-pin{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.main-header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 1019px;
+}
+
+.main-header-notch{
+    width: 100%;
+    height: 100%;
+    padding-top: 47px;
+}
+
+.main-content{
+    width: 100%;
+    height: 901px;
+    padding: 60px 0;
+}
+
+
+.main-content h1{
+    width: 100%;
+    height: 66px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 70px;
+    text-shadow: -3px 3px 6px rgba(4,226,255,.5), -2px 2px 1px #000;
+    
+}
