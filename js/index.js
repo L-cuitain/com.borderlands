@@ -54,7 +54,8 @@ window.onload = function () {
     //绘制不规则矩形
     drawDownAoS(ctxnv, 0, 0, 158, 72, 1340, 3180, 'rgba(0,0,0,0.5)', 'rgba(0,0,0,0.75)');
 
-    drawCenAo(ctxgh, 0, 0, 158, 1050, 1340, 3180, '#019ef9', imggh);
+    drawCenAo(ctxgh, 0, 0, 158, 1050, 1340, 3180, '#019ef9');
+    ctxgh.drawImage(imggh, -240, 0);
 
     drawCenTu(ctxfe, 0, 60, 158, 922, 1340, 3180, '#019ef9');
     ctxfe.drawImage(imgfeat, 0, 0, 1519, 982);

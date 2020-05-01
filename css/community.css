@@ -2,7 +2,7 @@
 .index-bg{
     position: absolute;
     width: 100%;
-    height: 3227px;
+    height: 4547px;
     z-index: -999;
     background-image: url(../images/index/bg-grunge.webp);
     background-repeat: no-repeat;
@@ -10,4 +10,324 @@
     background-attachment: fixed;
 }
 
+/* 社区顶部 */
+.top-title{
+    float: left;
+    width: 100%;
+    height: 482px;
+    overflow: hidden;
+}
+
+.top-title-pin{
+    position: relative;
+    width: 100%;
+    height: 482px;
+}
+
+.top-title-header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 435px;
+    padding-top: 47px;
+}
+
+.top-title-container{
+    width: 100%;
+    height: 315px;
+    padding: 60px 0;
+}
+
+.top-title-container h1{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 70px;
+    line-height: 4.4;
+    font-weight: 400;
+    -webkit-text-stroke: 1px #5a5a5a;
+    text-shadow: -3px 3px 6px rgba(4,226,255,.5), -2px 2px 1px #000;
+}
+
+
+/* 社区精选 */
+.community-handpick{
+    position: relative;
+    top: -60px;
+    float: left;
+    width: 100%;
+    height: 741px;
+}
+
+.community-handpick-pin{
+    position: relative;
+    width: 100%;
+    height: 862px;
+}
+
+.community-handpick-header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 742px;
+    padding: 60px 0;
+}
+
+.community-handpick-content{
+    width: 100%;
+    height: 622px;
+    padding: 60px 0;
+}
+
+.community-handpick-content h3{
+    width: 100%;
+    height: 39px;
+    padding-bottom: 60px;
+    font-weight: 400;
+    font-size: 42px;
+    text-align: center;
+}
+
+.community-handpick-highlights{
+    margin: 0 auto;
+    width: 1200px;
+    height: 523px;
+}
+
+.highlights-left{
+    float: left;
+    width: 785px;
+    height: 100%;
+    padding-right: 15px;
+}
+
+.highlights-right{
+    float: left;
+    width: 385px;
+    height: 100%;
+    padding-left: 15px;
+}
+
+
+
+/* 板块列表 */
+.community-list-left {
+    width: 100%;
+    height: 100%;
+}
+
+.community-list-right {
+    float: left;
+    width: 100%;
+    height: 246px;
+    margin-bottom: 15px;
+}
+
+
+.game-handpick-boxup {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.game-handpick-news-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+.video-player {
+    position: absolute;
+    top: 75px;
+    left: 150px;
+    width: 48px;
+    height: 38px;
+    background-image: url(../images/index/sprite-ui-1x.png);
+    background-position: -242px -150px;
+    z-index: 11;
+}
+
+.mask-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.15);
+    transition: all 0.4s;
+}
+
+#community-bigImg{
+    width: 100%;
+    height: 145%;
+    transition: all 0.8s;
+}
+
+
+.game-handpick-news-content img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.8s;
+}
+
+.img-change {
+    transform: scale(1.05);
+}
+
+
+.newsimg-bg {
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    width: 100%;
+    height: 103px;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, .75) 50%);
+}
+
+.hx-px {
+    height: 148px;
+}
+
+.newsimg-title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    padding: 4px 20px;
+    box-sizing: border-box;
+    transition: all 0.8s;
+}
+
+.newsimg-title-top{  
+    width: 100%;
+    height: 14px;
+    margin-bottom: 2px;
+    font-weight: 700;
+    color: #019ef9;
+    font-size: 13px;
+}
+
+.newsimg-title-bottom {
+    width: 100%;
+    /* height: auto; */
+    text-align: left;
+    font-size: 30px;
+    font-family: borderland, sans-serif;
+    color: #ffffff;
+}
+
+
+/* 关注 */
+.community-attention{
+    float: left;
+    width: 100%;
+    height: 495px;
+    overflow: hidden;
+}
+
+.community-attention-pin{
+    position: relative;
+    width: 100%;
+    height: 495px;
+}
+
+.community-attention-header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 434px;
+    overflow: hidden;
+}
+
+#img-fl4k{
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 700px;
+    width: 42%;
+}
+
+.community-attention-container{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 374px;
+    padding: 60px 0;
+}
+
+.community-attention-content{
+    width: 1170px;
+    height: 304px;
+    padding: 35px 15px;
+    margin: 0 160px;
+}
+
+.attention-left{
+    position: relative;
+    float: left;
+    width: 485px;
+    height: 184px;
+    padding: 60px 50px;
+    margin-left: 80px;
+}
+
+.attention-left h3{
+    font-size: 42px;
+    text-align: center;
+    color: #fff;
+}
+
+.attention-left p{
+    width: 100%;
+    height: 48px;
+    padding-bottom: 10px;
+    margin: 10px 0 20px;
+    font-size: 16px;
+    font-family: Posterama Text W07 Regular,sans-serif;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    line-height: 1.5;
+}
+
+
+.other-button{
+    position: absolute;
+    bottom: 60px;
+    left: -300px;
+    width: auto;
+    height: 61px;
+    transition: all 0.7s;
+    transform: translateX(220%);
+}
+
+.other-button:hover{
+    bottom: 65px;
+}
+
+
+.other-btn-left{
+    width: 28px;
+    height: 61px;
+    background-image: url(../images/index/sprite-ui-1x.png);
+    background-position: -282px -236px;
+}
+
+.other-btn-center{
+    width: 165px;
+    height: 61px;
+    line-height: 60px;
+    background-image: url(../images/index/button-m.webp);
+    color: #fff;
+}
+
+.other-btn-right{
+    width: 28px;
+    height: 61px;
+    background-image: url(../images/index/sprite-ui-1x.png);
+    background-position: -312px -236px;
+}
 

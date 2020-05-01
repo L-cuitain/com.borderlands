@@ -40,7 +40,7 @@ function drawDownAoS(ctx, startX, startY, width, height, courseX, stopX, strokeS
 //height Y轴第一次移动距离
 //courseX 过程中需要移动的距离
 //stopX X轴终止时的距离
-function drawCenAo(ctx, startX, startY, width, height, courseX, stopX, fillStyle, img) {
+function drawCenAo(ctx, startX, startY, width, height, courseX, stopX, fillStyle) {
     //使用moveTo设置起始值
     ctx.moveTo(startX, startY);
     //移动指定坐标
@@ -74,7 +74,6 @@ function drawCenAo(ctx, startX, startY, width, height, courseX, stopX, fillStyle
 
     // ctx.fillRect(0, 0, 1590, 930);
     //绘制背景图
-    ctx.drawImage(img, -240, 0);
 
 }
 
@@ -216,6 +215,42 @@ function drawDownTu(ctx, startX, startY, width, height, courseX, stopX, fillStyl
     ctx.lineTo(stopX, height);
     ctx.lineTo(stopX, startY);
     ctx.lineTo(width, startY);
+    ctx.clip();
+    //关闭路径
+    ctx.closePath();
+
+    ctx.lineWidth = 3;
+
+    // //描边颜色
+    // ctx.strokeStyle = strokeStyle;
+    // //描边
+    // ctx.stroke();
+
+    //填充颜色
+    ctx.fillStyle = fillStyle;
+    //填充
+    ctx.fill();
+}
+
+
+//长距离下间凸形矩形
+//startX X轴起始值
+//startY Y轴起始值
+//width X轴第一次移动距离
+//height Y轴第一次移动距离
+//courseX 过程中需要移动的距离
+//stopX X轴终止时的距离
+function drawDownTu(ctx, startX, startY, width, height, courseX, stopX, fillStyle) {
+    //使用moveTo设置起始值
+    ctx.moveTo(startX, startY);
+    //移动指定坐标
+    ctx.lineTo(startX, height);
+    ctx.lineTo(width, height);
+    ctx.lineTo(width + 60, height + 60);
+    ctx.lineTo(courseX - 45, height + 60);
+    ctx.lineTo(courseX + 15, height);
+    ctx.lineTo(stopX, height);
+    ctx.lineTo(stopX, startY);
     ctx.clip();
     //关闭路径
     ctx.closePath();
