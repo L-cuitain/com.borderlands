@@ -1,0 +1,11 @@
+/* 整体背景 */
+.index-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -999;
+    background-image: url(../images/index/bg-grunge.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}

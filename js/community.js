@@ -19,11 +19,18 @@ var ctxatt = document.querySelector('#canvas-attention').getContext('2d');
 ctxatt.beginPath();
 
 
-// //获取页面订阅中的canvas
-// var ctxsub = document.querySelector('#canvas-sub').getContext('2d');
+//获取社区页面制作中的canvas
+var ctxmake = document.querySelector('#canvas-make').getContext('2d');
 
-// //新建路径
-// ctxsub.beginPath();
+//新建路径
+ctxmake.beginPath();
+
+
+//获取页面订阅中的canvas
+var ctxsub = document.querySelector('#canvas-sub').getContext('2d');
+
+//新建路径
+ctxsub.beginPath();
 
 //创建图片
 let imgtop = new Image();
@@ -32,6 +39,10 @@ imgtop.src = './images/community/header-bg.webp';
 //创建图片
 let imgatt = new Image();
 imgatt.src = './images/community/gbforum-bg.webp';
+
+//创建图片
+let imgmake = new Image();
+imgmake.src = './images/community/art-bg.webp';
 
 
 //加载图片
@@ -46,7 +57,10 @@ window.onload = function () {
     drawCenAo(ctxatt, 0, 0, 158, 495, 1340, 3180, '#019ef9');
     ctxatt.drawImage(imgatt, -60, 0, 1700,495);
 
-    // drawUpAo(ctxsub, 0, 0, 158, 400, 1340, 3180, 'rgba(0,0,0,0.75)', 'rgba(0,0,0,0.75)');
+    drawCenTu(ctxmake, 0, 60, 158, 304, 1340, 3180, '#019ef9');
+    ctxmake.drawImage(imgmake, 0, 0, 1519,364);
+
+    drawUpAo(ctxsub, 0, 0, 158, 400, 1340, 3180, 'rgba(0,0,0,0.75)', 'rgba(0,0,0,0.75)');
 
 }
 
@@ -92,3 +106,23 @@ $('.highlights-content').on({
         }
     }
 }, '.game-handpick-new')
+
+
+//创建社区板块鼠标移入移出事件
+$('.contribution-lists').on({
+    'mouseenter': function () {
+
+        //放大图片
+        $(this).addClass('contribution-img-animate');
+
+        $(this).children('.contribution-list-down').fadeIn(200);
+
+    },
+    'mouseleave': function () {
+        //缩小图片
+        $(this).removeClass('contribution-img-animate');
+
+        $(this).children('.contribution-list-down').fadeOut(200);
+
+    }
+}, '.contribution-list')

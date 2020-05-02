@@ -1,8 +1,12 @@
+html{
+    height: 100%;
+}
+
 /* 整体背景 */
 .index-bg{
     position: absolute;
     width: 100%;
-    height: 4547px;
+    height: 4087px;
     z-index: -999;
     background-image: url(../images/index/bg-grunge.webp);
     background-repeat: no-repeat;
@@ -64,6 +68,25 @@
     width: 100%;
     height: 862px;
 }
+
+.other-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat-x;
+    z-index: -1;
+}
+
+.bg-top{
+    background-position: top;
+    background-image: url(../images/index/bg-grunge-top.hq.webp);
+}
+
+.bg-bottom{
+    background-position: bottom;
+    background-image: url(../images/index/bg-grunge-bottom.hq.webp);
+}
+
 
 .community-handpick-header{
     position: absolute;
@@ -331,3 +354,208 @@
     background-position: -312px -236px;
 }
 
+
+/* 制作 */
+.make{
+    position: relative;
+    top: -60px;
+    float: left;
+    width: 100%;
+    height: 364px;
+    overflow: hidden;
+}
+
+.make-pin{
+    position: relative;
+    width: 100%;
+    height: 364px;
+}
+
+.make-header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 242px;
+    padding: 60px 0;
+}
+
+.make-container{
+    width: 100%;
+    height: 122px;
+    padding: 60px 0;
+}
+
+.make-center{
+    width: 1200px;
+    height: 122px;
+    margin: 0 160px;
+}
+
+.make-content{
+    width: 550px;
+    height: 122px;
+    padding-right: 50px;
+    margin-left: 600px;
+}
+
+
+.make-content h3{
+    color: #fff;
+    font-size: 42px;
+    text-align: center;
+}
+
+.make-content p{
+    width: 550px;
+    height: 24px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* 社区贡献 */
+.contribution{
+    position: relative;
+    top: -120px;
+    float: left;
+    width: 100%;
+    height: 1856px;
+    overflow: hidden;
+}
+
+.contribution-pin{
+    position: relative;
+    width: 100%;
+    height: 1856px;
+}
+
+.contribution-scope{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 1455px;
+    padding-top: 60px;
+}
+
+.contribution-content{
+    width: 100%;
+    height: 1355px;
+    padding: 60px 0;
+}
+
+
+.contribution-container{
+    width: 1200px;    
+    height: 100%;
+    margin: 0 160px;
+}
+
+.contribution-container h3{
+    float: left;
+    width: 100%;
+    height: 39px;
+    padding-bottom: 60px;
+    text-align: center;
+    font-size: 42px;
+    font-weight: 400;
+}
+
+.contribution-lists{
+    float: left;
+    width: 1170px;
+    height: 1236px;
+    margin: 0 15px;
+}
+
+
+.contribution-list{
+    position: relative;
+    float: left;
+    width: 325px;
+    height: 325px;
+    margin: 32px;
+    cursor: pointer;
+    background-color: #000;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+
+
+.contribution-list img{
+    height: 100%;
+}
+
+.contribution-bigImg-change1{
+    position: relative;
+    left:-54px;
+}
+
+.contribution-bigImg-change2{
+    width: 100%;
+    height: 150%;
+}
+
+.contribution-img-animate{
+    transform: scale(1.1); 
+}
+
+.contribution-list-down{
+    position: absolute;
+    bottom: 0;
+    width: 305px;
+    height: 16px;
+    padding: 30px 10px 15px;
+    line-height: 20px;
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7) 50%);
+    display: none;
+}
+
+.contribution-list-down a{
+    float: left;
+    width: auto;
+    height: 100%;
+    font-size: 11px;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Posterama Text Regular', Helvetica, Arial, sans-serif;
+}
+
+.contribution-list-down s{
+    float: left;
+    font-size: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Posterama Text Regular', Helvetica, Arial, sans-serif;
+}
+
+.contribution-list-down i{
+    float: right;
+    width: 16px;
+    height: 100%;
+    color: #fff;
+    font-size: 13px;
+}
+
+.load-more{
+    float: left;
+    width: 100%;
+    height: 24px;
+    padding: 15px;
+    margin-top: 10px;
+    background: #000;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.load-more:hover{
+    background: #333333;
+}
+
+.brand-rela{
+    position: relative;
+    top: -120px;
+}
