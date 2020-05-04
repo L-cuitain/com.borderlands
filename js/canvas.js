@@ -171,7 +171,7 @@ function drawUpAo(ctx, startX, startY, width, height, courseX, stopX, strokeStyl
     ctx.lineTo(width, startY);
     ctx.lineTo(width + 60, startY + 60);
     ctx.lineTo(courseX, startY + 60);
-    ctx.lineTo(courseX + 45, startY);
+    ctx.lineTo(courseX + 60, startY);
     ctx.lineTo(stopX, startY);
     ctx.lineTo(stopX, height);
     ctx.lineTo(startX, height);

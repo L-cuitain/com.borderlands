@@ -1,0 +1,186 @@
+/* 整体背景 */
+.index-bg{
+    position: absolute;
+    width: 100%;
+    height: 1500px;
+    z-index: -999;
+    background-image: url(../images/index/bg-grunge.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.buy{
+    float: left;
+    width: 100%;
+    height: 1327px;
+    overflow: hidden;
+}
+
+.buy-pin{
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.buy-scope{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 1220px;
+    padding: 47px 0 60px;
+}
+
+.buy-notches{
+    width: 100%;
+    height: 1100px;
+    padding: 60px 0;
+}
+
+.buy-container{
+    float: left;
+    width: 1200px;
+    height: auto;
+    margin: 0 160px;
+}
+
+.buy-container h3{
+    width: 100%;
+    margin-bottom: 35px;
+    font-weight: 400;
+    font-size: 42px;
+    text-align: center;
+}
+
+.buy-title-lists{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: 62px;
+    padding: 0 35px;
+}
+
+
+.feature-button {
+    position: relative;
+    top: 0;
+    width: auto;
+    height: 47px;
+    margin: 0 8px 0;
+    transition: all 0.8s;
+}
+
+
+.feature-button:hover {
+    top: -3px;
+}
+
+
+.feature-btn-left {
+    width: 17px;
+    height: 100%;
+    background-image: url(../images/index/sprite-ui-1x.png);
+    /* background-position: -86px -428px; */
+
+    background-position: -48px -428px;
+}
+
+.feature-btn-center {
+    width: auto;
+    height: 47px;
+    font-size: 20px;
+    line-height: 48px;
+    padding: 0 10px;
+    background-image: url(../images/index/button-black-m.webp);
+    color: #009cf7;
+}
+
+.feature-btn-right {
+    width: 17px;
+    height: 100%;
+    background-image: url(../images/index/sprite-ui-1x.png);
+    background-position: -67px -428px;
+
+    /* background-position: -105px -428px; */
+}
+
+.btn-left-white {
+    background-position: -86px -428px;
+}
+
+.btn-center-white {
+    background-image: url(../images/index/button-white-m.webp);
+    color: #000;
+}
+
+.btn-right-white {
+    background-position: -105px -428px;
+}
+
+
+.buy-content-bottom{
+    position: relative;
+    top: -28px;
+    float: left;
+    width: 100%;
+    background-color: #021523;
+    border: 1px solid #019ef9;
+    clip-path: polygon(35px 0, calc(100% - 35px) 0, 100% 0px, 
+    100% calc(100% - 35px), calc(100% - 35px) 100%,
+    35px 100%, 0 calc(100% - 0px), 0 35px);
+    z-index: 1;
+}
+
+.bottom1{
+    height: 992px;
+}
+
+.buy-content-bottom-container{
+    width: auto;
+    height: 100%;
+    padding: 65px 35px 30px;
+    box-sizing: border-box;
+}
+
+.buy-content-bottom-container img{
+    float: left;
+    width: 279px;
+    height: 352px;
+}
+
+.buy-content-bottom-right{
+    float: left;
+    width: 804px;
+    height: 408px;
+    padding-left: 35px;
+}
+
+
+.buy-content-bottom-right h3{
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 42px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.buy-introduce{
+    float: left;
+    width: 512px;
+    height: 359px;
+}
+
+.buy-introduce p{
+    width: 100%;
+    height: auto;
+    margin-top :15px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: inherit;
+    line-height: 1.3;
+}

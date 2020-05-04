@@ -1,8 +1,12 @@
+html{
+    height: 100%;
+}
+
 /* 整体背景 */
 .index-bg{
     position: absolute;
     width: 100%;
-    height: 3819px;
+    height: 3813px;
     z-index: -999;
     background-image: url(../images/index/bg-grunge.webp);
     background-repeat: no-repeat;
@@ -332,9 +336,276 @@
     color: #fff;
 }
 
+.course-step{
+    float: left;
+    width: 380px;
+    height :378px;
+    padding: 0 10px;
+}
+
+.course-step img{
+    float: left;
+    width: 370px;
+    height :270px;
+    text-align: center;
+}
+
+.course-step h4{
+    float: left;
+    width: 100%;
+    height :28px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.course-step p{
+    float: left;
+    width: 100%;
+    height :auto;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+}
+
+/* 注册 */
+.register{
+    position: relative;
+    top: -183px;
+    float: left;
+    width: 100%;
+    height: 539px;
+    overflow: hidden;
+}
+
+.register-pin{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.register-scope{
+    position: absolute;
+    top: 0;
+    width: 1200px;
+    height: 100%;
+    margin: 0 160px;
+}
+
+.register-content{
+    width: 100%;
+    height: 419px;
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+#team-bg{
+    position: relative;
+    top: -49px;
+    left: 13px;
+    display: block;
+    float: left;
+    width: 600px;
+    height: 580px;
+}
+
+.register-content-right{
+    float: left;
+    width: 600px;
+    height: 389px;
+    padding: 15px 0;
+}
+
+
+.register-content-right h3{
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-size: 42px;
+    font-weight: 400;
+}
+
+
+.register-content-right p{
+    float: left;
+    width: 100%;
+    height :auto;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+}
+
+.box-img{
+    float: left;
+    width: 263px;
+    height: 179px;
+    margin: 35px 168px;
+}
+
+.box-img img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.register-button{
+    position: relative;
+    bottom: 0px;
+    left: -282px;
+    width: auto;
+    height: 61px;
+    transition: all 0.7s;
+    transform: translateX(220%);
+}
+
+.register-button:hover{
+    bottom: 5px;
+}
+
+/* 問題 */
+.question{
+    position: relative;
+    top: -242px;
+    float: left;
+    width: 100%;
+    height: 1542px;
+    overflow: hidden;
+}
+
+.question-pin{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.question-scope{
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    height: 100%;
+    padding-top: 60px;
+    overflow: hidden;
+    background-color: #fff;
+}
 
 
 
+.question-container{
+    width: 100%;
+    height: auto;
+    padding-bottom: 60px;
+    overflow: hidden;
+}
 
 
 
+.question-container .question-title{
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-size: 42px;
+    font-weight: 400;
+    color: #000;
+    padding-bottom: 60px;
+}
+
+.question-lists{
+    float: left;
+    width: 768px;
+    height: auto;
+    margin: 0 375px;
+}
+
+
+.question-list{
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+
+.question-list:nth-child(3){
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.question-list-content{
+    float: left;
+    width: 100%;
+    height: 34px;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+.question-list-content h3{
+    float: left;
+    font-weight: 400;
+    font-size: 30px;
+    color: #019ef9;
+}
+
+.question-list-icon{
+    float: right;
+    width: 27px;
+    height: 27px;
+    margin: 5px 20px 0 0;
+    background-image: url(../images/index/sprite-ui-1x.png);
+    background-position: -275px -329px;
+    background-repeat: no-repeat;
+}
+
+
+
+.question-list-icon-change1{
+    background-position: -246px -329px;
+}
+
+.question-list-icon-change2{
+    background-position: -275px -329px;
+}
+
+
+
+.question-list-sections{
+    float: left;
+    width: 100%;
+    height: auto;
+    padding-top :15px;
+    display: none;
+}
+
+
+.question-list-section{
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 15px 0;
+}
+
+.question-list-section div:nth-child(1){
+    font-size: 18px;
+    color: #000;
+    font-family: Posterama Text W07 Regular,sans-serif;
+}
+
+.question-list-section div:nth-child(2){
+    padding-top: 5px;
+    font-size: 16px;
+    color: #000;
+    opacity: .5;
+    font-family: Posterama Text W07 Regular,sans-serif;
+}
+
+
+
+.brand-rela{
+    position: relative;
+    bottom: 242px;
+}
