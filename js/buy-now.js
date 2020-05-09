@@ -22,3 +22,26 @@ window.onload = function () {
 
     // drawUpAo(ctxsub, 0, 0, 158, 400, 1340, 3180, 'rgba(0,0,0,0.75)', 'rgba(0,0,0,0.75)');
 }
+
+
+//显示第一条列表
+$('.buy-content-bottom').eq(0).show();
+
+//添加鼠标点击事件
+$('.buy-title-lists').on('click','.feature-button',function(){
+    $('.feature-button').children('.feature-btn-left').removeClass('btn-left-white');
+    $('.feature-button').children('.feature-btn-center').removeClass('btn-center-white');
+    $('.feature-button').children('.feature-btn-right').removeClass('btn-right-white');    
+
+    $(this).children('.feature-btn-left').addClass('btn-left-white');
+    $(this).children('.feature-btn-center').addClass('btn-center-white');
+    $(this).children('.feature-btn-right').addClass('btn-right-white');
+
+
+
+    //获取索引
+    let index = $(this).index();
+
+    //显示菜单
+    $('.buy-content-bottom').eq(index).fadeIn(500).siblings('.buy-content-bottom').hide();    
+})

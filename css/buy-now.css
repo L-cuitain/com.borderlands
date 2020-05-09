@@ -132,10 +132,11 @@
     100% calc(100% - 35px), calc(100% - 35px) 100%,
     35px 100%, 0 calc(100% - 0px), 0 35px);
     z-index: 1;
+    display: none;
 }
 
 .bottom1{
-    height: 992px;
+    height: 940px;
 }
 
 .buy-content-bottom-container{
@@ -182,5 +183,117 @@
     font-weight: 400;
     font-size: 16px;
     font-family: inherit;
-    line-height: 1.3;
+    line-height: 1.5;
+}
+
+
+.buy-introduce-right{
+    float: left;
+    width: 256px;
+    height: 100%;
+    padding-left: 35px;
+}
+
+.area-title{
+    float: left;
+    width: 100%;
+    height: 14px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 13px;
+}
+
+.area-choose{
+    float: left;
+    width: 100%;
+    height: 44px;
+}
+
+.choose{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 13px;
+    color: #fff;
+}
+
+.choose select{
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 44px;
+    color: #fff;
+    appearance:none;
+    padding-left: 10px;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  background-color: rgba(0,0,0,.5);
+  border: 0px;
+}
+
+.titles{
+    float: left;
+    width: 100%;
+    height: 50px;
+    padding: 35px 0 0 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 13px;
+}
+
+
+
+.title-button{
+    width: 256px;
+    height: 49px;
+    margin-top: 30px;
+}
+
+
+.title-button1-left{
+    width: 28px;
+    height: 49px;
+    background-image: url(../images/index/sprite-ui-1x.png);
+    background-position: -60px -335px;
+}
+
+.title-button1-center{
+    width: 200px;
+    height: 61px;
+    line-height: 48px;
+    background-image: url(../images/index/button-yellow-m.webp);
+    background-position: 0px -6px;
+    color: #000000;
+}
+
+.title-button1-right{
+    width: 28px;
+    height: 49px;
+    background-image: url(../images/index/sprite-ui-1x.png);
+    background-position: -90px -335px;
+}
+
+.introduce-text{
+    float: left;
+    width: 1124px;
+    height: auto;
+    margin-top: 15px;
+}
+
+.introduce-text p{
+    font-size: 16px;
+    font-family: Posterama Text W07 Regular,sans-serif;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.introduce-text strong{
+    font-size: 16px;
+    font-family: Posterama Text W07 Regular,sans-serif;
+    color: #fff;
 }

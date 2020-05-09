@@ -473,6 +473,7 @@
 
 .choose{
     position: relative;
+    display: inline-block;
     width: 138px;
     height: 24px;
     line-height: 24px;
@@ -489,8 +490,9 @@
     z-index: 10;
     width: 188px;
     height: 44px;
-    color: #000;
+    color: #fff;
     appearance:none;
+    padding: 10px;
   -moz-appearance:none;
   -webkit-appearance:none;
   background-color: rgba(0,0,0,.5);
@@ -578,3 +580,4 @@ input[type=checkbox] {
     color: #019ef9;
     font-weight: 700;
 } 
+
